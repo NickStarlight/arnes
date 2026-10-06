@@ -1,12 +1,7 @@
 import { i18n } from '@/i18n.ts'
-
-interface InstallPromptEvent extends Event {
-  /** Opens the browser-owned dialog once, directly from a user gesture. */
-  prompt(): Promise<{ outcome: 'accepted' | 'dismissed' }>
-}
+import { canInstall, installPromptChanges, takeInstallPrompt } from '@/pwa/install-prompt.ts'
 
 class AppInstall extends HTMLElement {
-  private pendingPrompt: InstallPromptEvent | undefined
   private button = document.createElement('button')
   private status = document.createElement('p')
 
@@ -22,39 +17,27 @@ class AppInstall extends HTMLElement {
     this.replaceChildren(this.button, this.status)
 
     this.button.addEventListener('click', this.install)
-    window.addEventListener('beforeinstallprompt', this.capturePrompt)
-    window.addEventListener('appinstalled', this.clearPrompt)
+    installPromptChanges.addEventListener('change', this.syncPrompt)
+    this.syncPrompt()
   }
 
-  /** Releases browser listeners and discards any prompt when detached. */
+  /** Releases view listeners while preserving browser eligibility across navigation. */
   disconnectedCallback(): void {
     this.button.removeEventListener('click', this.install)
-    window.removeEventListener('beforeinstallprompt', this.capturePrompt)
-    window.removeEventListener('appinstalled', this.clearPrompt)
-    this.clearPrompt()
+    installPromptChanges.removeEventListener('change', this.syncPrompt)
   }
 
-  /** Retains the one-use prompt so installation starts from the page button. */
-  private capturePrompt = (event: Event): void => {
-    event.preventDefault()
-    this.pendingPrompt = event as InstallPromptEvent
+  /** Reflects the shared prompt when eligibility or the mounted view changes. */
+  private syncPrompt = (): void => {
     this.status.textContent = ''
     this.button.hidden = false
-    this.hidden = false
-  }
-
-  /** Hides the control after installation or consumption of its one-use prompt. */
-  private clearPrompt = (): void => {
-    this.pendingPrompt = undefined
-    this.hidden = true
+    this.hidden = !canInstall()
   }
 
   /** Consumes the prompt once and reports failures without leaving a dead button. */
   private install = async (): Promise<void> => {
-    const prompt = this.pendingPrompt
+    const prompt = takeInstallPrompt()
     if (!prompt) return
-
-    this.clearPrompt()
 
     try {
       await prompt.prompt()
