@@ -140,10 +140,6 @@ msgid "Your conversations, settings, and API keys are stored on your device. No 
 msgstr "Suas conversas, configurações e chaves de API ficam armazenadas no seu dispositivo. Sem sincronização na nuvem. As requisições vão diretamente aos provedores escolhidos, sujeitos às políticas de dados deles."
 
 #. js-lingui-explicit-id
-msgid "Connect search engines that allow browser requests through CORS. Give your assistant access to the web with your own API keys."
-msgstr "Conecte mecanismos de busca que permitem requisições do navegador via CORS. Dê ao seu assistente acesso à web com suas próprias chaves de API."
-
-#. js-lingui-explicit-id
 msgid "A browser-native PWA"
 msgstr "Um PWA feito para o navegador"
 
@@ -178,14 +174,6 @@ msgstr "Suas mensagens e seu conteúdo vão diretamente para o provedor selecion
 #. js-lingui-explicit-id
 msgid "To learn how your data is used, consult each provider’s privacy policy."
 msgstr "Para saber como seus dados são usados, consulte a política de privacidade de cada provedor."
-
-#. js-lingui-explicit-id
-msgid "Give your assistant access to the web. Connect a search engine with your own API key to find fresh information and sources."
-msgstr "Dê ao seu assistente acesso à web. Conecte um mecanismo de busca com sua própria chave de API para encontrar informações atualizadas e fontes."
-
-#. js-lingui-explicit-id
-msgid "Learn more about search engine support"
-msgstr "Saiba mais sobre o suporte a mecanismos de busca"
 
 #. js-lingui-explicit-id
 msgid "A private, fully client-side AI harness. Your keys. Your models. Your language."
@@ -420,11 +408,6 @@ msgid "Access OpenAI models through the OpenAI API."
 msgstr "Acesse os modelos OpenAI pela API da OpenAI."
 
 #. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:44
-msgid "A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."
-msgstr "Um mecanismo de busca e API de dados da web para aplicações de IA. Encontra fontes e trechos da web para embasar as respostas do assistente."
-
-#. js-lingui-explicit-id
 #: src/components/settings/provider-settings.ts:64
 msgid "Visit website"
 msgstr "Visitar site"
@@ -473,11 +456,6 @@ msgstr "Não foi possível salvar a chave de API. Tente novamente."
 #: src/components/settings/providers-settings.ts:5
 msgid "Providers"
 msgstr "Provedores"
-
-#. js-lingui-explicit-id
-#: src/components/settings/search-engine-settings.ts:5
-msgid "Search engines"
-msgstr "Mecanismos de busca"
 
 #. js-lingui-explicit-id
 #: src/components/conversations/conversation-list.ts:10

@@ -7,12 +7,6 @@ export function createResponseCost(model: string) {
   let available = true
   const completed = new Set<string>()
 
-  /** Adds tool charges without exposing billing metadata to the model. */
-  function addToolCost(cost: number | undefined): void {
-    if (cost === undefined) available = false
-    else total += cost
-  }
-
   /** Uses complete generation metadata instead of charging each streamed chunk. */
   function handleLLMEnd(output: { generations: { text: string, message?: unknown }[][] }, runId: string): void {
     if (completed.has(runId)) return
@@ -31,5 +25,5 @@ export function createResponseCost(model: string) {
     return available && completed.size > 0 ? total : undefined
   }
 
-  return { callbacks: [{ handleLLMEnd, awaitHandlers: true }], addToolCost, value }
+  return { callbacks: [{ handleLLMEnd, awaitHandlers: true }], value }
 }

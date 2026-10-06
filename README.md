@@ -2,7 +2,7 @@
 
 A fully client-side AI harness that runs in your browser.
 
-Connect directly to AI providers and search engines with your own API keys. No backend, no proxy, no middleman. Conversations and settings stay on your device; requests go directly to your chosen providers.
+Connect directly to AI providers with your own API keys. No backend, no proxy, no middleman. Conversations and settings stay on your device; requests go directly to your chosen providers.
 
 Made with Web Components. Install it as a PWA or host it yourself.
 

@@ -40,15 +40,6 @@ const providers: Record<string, Provider> = {
     website: 'https://openai.com/',
     privacy: 'https://openai.com/policies/privacy-policy/',
   },
-  'exa': {
-    label: "Exa",
-    description: i18n._("A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."),
-    logo: 'exa',
-    width: 96,
-    height: 30,
-    website: 'https://exa.ai/',
-    privacy: 'https://exa.ai/privacy-policy',
-  },
 }
 
 let nextId = 0

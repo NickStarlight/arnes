@@ -1,4 +1,4 @@
-arnes runs entirely in your browser. It calls AI and search APIs directly with your keys, without an application backend or proxy. **Provider support depends on CORS.**
+arnes runs entirely in your browser. It calls AI APIs directly with your keys, without an application backend or proxy. **Provider support depends on CORS.**
 
 ## Why CORS matters
 
@@ -17,6 +17,5 @@ Self-hosting still requires the provider to allow requests from your installatio
 | OpenAI | AI models |
 | Anthropic | AI models |
 | Together AI | AI models |
-| Exa | Web search and page reading |
 
-Add your API keys in **Settings → Providers** or **Search engines**. Choose an AI model from the model picker.
+Add your API keys in **Settings → Providers**. Choose an AI model from the model picker.

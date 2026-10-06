@@ -14,7 +14,7 @@ type ChatRequest = {
 /** Streams text and per-call usage while LangGraph persists the conversation; tool calls reset usage totals. */
 export async function* streamChatResponse(request: ChatRequest): AsyncGenerator<ChatStreamEvent> {
   const cost = createResponseCost(request.model)
-  const agent = await createChatAgent(request.provider, request.model, cost.addToolCost)
+  const agent = await createChatAgent(request.provider, request.model)
   request.signal.throwIfAborted()
   const stream = await agent.stream(
     { messages: [{ role: 'user', content: request.message }] },

@@ -6,7 +6,6 @@ import '@/components/conversations/conversation-list.ts'
 import '@/components/settings/general-settings.ts'
 import '@/components/settings/assistant-settings.ts'
 import '@/components/settings/providers-settings.ts'
-import '@/components/settings/search-engine-settings.ts'
 import '@/components/settings/data-control-settings.ts'
 import '@/components/settings/about-settings.ts'
 
@@ -35,7 +34,6 @@ const views: Record<string, View> = {
       <general-settings></general-settings>
       <assistant-settings></assistant-settings>
       <providers-settings></providers-settings>
-      <search-engine-settings></search-engine-settings>
       <data-control-settings></data-control-settings>
       <about-settings></about-settings>
     </main>`,
