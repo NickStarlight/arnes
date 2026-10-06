@@ -1,0 +1,6 @@
+import '@/pages/style.css'
+import '@/pages/home.css'
+import '@/themes/dark/style.css'
+import '@/pages/theme.ts'
+import '@/components/app-icons.ts'
+import '@/components/arnes-app.ts'

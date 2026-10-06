@@ -1,0 +1,1217 @@
+@import "modern-normalize/modern-normalize.css";
+
+@font-face {
+  font-family: "Gidole";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/fonts/gidole/Gidole/Gidole-Regular.ttf") format("truetype");
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 180ms;
+    animation-timing-function: var(--motion-easing);
+  }
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../public/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: light;
+
+  --color-text: #161616;
+  --color-muted: #525252;
+  --color-disabled: #6f6f6f;
+  --color-surface: #fff;
+  --color-surface-subtle: #f4f4f4;
+  --color-hover: #f0f0f0;
+  --color-border: #e0e0e0;
+  --color-accent: #0f62fe;
+  --color-link: #0f62fe;
+  --color-button: #393939;
+  --color-on-button: #fff;
+  --color-danger: #da1e28;
+  --color-success: #198038;
+
+  --font-family: "IBM Plex Sans", system-ui, sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-caption: 0.75rem;
+  --font-size-body: 1rem;
+  --font-size-heading: 1.5rem;
+  --font-weight-semibold: 600;
+  --line-height-body: 1.5;
+  --line-height-heading: 1.25;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+
+  --content-width: 64rem;
+  --control-height: 3rem;
+  --control-height-small: 2.5rem;
+  --control-height-compact: 2rem;
+  --icon-size: 1.25rem;
+  --chevron-size: 1rem;
+  --radius-control: 0.25rem;
+  --border: 1px solid var(--color-border);
+  --focus-ring: 2px solid var(--color-accent);
+  --focus-offset: 2px;
+  --shadow-popover: 0 2px 6px #0000001a;
+  --logo-filter: none;
+  --motion-duration-expand: 200ms;
+  --motion-easing: cubic-bezier(0.2, 0, 0.38, 0.9);
+
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+a {
+  color: var(--color-link);
+}
+
+body {
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.inline-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--control-height-compact);
+  color: var(--color-muted);
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.inline-loading-spinner {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-accent);
+  transform-origin: center;
+  animation: inline-loading-spin 0.69s linear infinite;
+}
+
+.inline-loading-spinner circle {
+  fill: none;
+  stroke-width: 16;
+  stroke-linecap: butt;
+}
+
+.inline-loading-track {
+  stroke: var(--color-border);
+}
+
+.inline-loading-arc {
+  stroke: currentColor;
+  stroke-dasharray: 188.5;
+  stroke-dashoffset: 98;
+}
+
+@keyframes inline-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inline-loading-spinner {
+    animation: none;
+  }
+}
+
+/* Turn alignment owns scrolling while streamed content changes height. */
+arnes-shell .app-messages {
+  overflow-anchor: none;
+}
+
+arnes-shell .chat-turn {
+  display: flow-root;
+}
+
+arnes-shell .chat-turn:last-child {
+  min-height: var(--chat-turn-height, 0px);
+}
+
+arnes-shell .arnes-message[data-role='user'] {
+  width: fit-content;
+  max-width: 85%;
+  margin-inline-start: auto;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface-subtle);
+  border-inline-start: 2px solid var(--color-border);
+  border-radius: var(--radius-control);
+}
+
+arnes-shell arnes-composer {
+  padding: 0 var(--space-2) var(--space-2);
+}
+
+arnes-shell .composer {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+arnes-shell .composer-bar {
+  anchor-name: --composer-settings;
+  display: flex;
+  align-items: flex-end;
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+}
+
+arnes-shell .composer-message {
+  flex: 1;
+  min-width: 0;
+}
+
+arnes-shell .composer label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--color-muted);
+}
+
+arnes-shell .composer textarea,
+arnes-shell .composer select {
+  display: block;
+  min-width: 0;
+  width: 100%;
+  color: var(--color-text);
+}
+
+arnes-shell .composer select {
+  height: var(--control-height);
+  max-width: 100%;
+  padding: var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  font-size: var(--font-size-body);
+}
+
+arnes-shell .composer textarea {
+  height: var(--control-height);
+  min-height: var(--control-height);
+  max-height: min(15rem, 35dvh);
+  overflow-y: auto;
+  padding: var(--space-3) var(--space-4);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+}
+
+arnes-shell .composer-panel {
+  position: fixed;
+  position-anchor: --composer-settings;
+  inset: auto;
+  bottom: var(--space-4);
+  bottom: anchor(bottom);
+  left: max(var(--space-2), calc((100vw - var(--content-width)) / 2 + var(--space-2)));
+  left: anchor(left);
+  width: calc(min(100vw, var(--content-width)) - 2 * var(--space-2));
+  width: anchor-size(width);
+  max-height: calc(100dvh - 6rem);
+  overflow: auto;
+  margin: 0;
+  padding: var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-popover);
+  gap: var(--space-4);
+}
+
+arnes-shell .composer-panel:popover-open {
+  display: grid;
+}
+
+arnes-shell .composer-settings {
+  grid-template-columns: minmax(0, calc(20rem + var(--space-4) + 1px)) minmax(0, 1fr);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  arnes-shell .composer-panel {
+    opacity: 0;
+    transform: translateY(var(--space-2));
+    transition:
+      opacity var(--motion-duration-expand) var(--motion-easing),
+      transform var(--motion-duration-expand) var(--motion-easing),
+      display var(--motion-duration-expand) allow-discrete,
+      overlay var(--motion-duration-expand) allow-discrete;
+  }
+
+  arnes-shell .composer-panel:popover-open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @starting-style {
+    arnes-shell .composer-panel:popover-open {
+      opacity: 0;
+      transform: translateY(var(--space-2));
+    }
+  }
+}
+
+arnes-shell .composer-model-settings {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  min-width: 0;
+  padding-inline-end: var(--space-4);
+  border-inline-end: var(--border);
+}
+
+arnes-shell .composer-model-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-content: stretch;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+context-meter:not([hidden]) {
+  display: block;
+  flex: 0 0 40%;
+  min-width: 3rem;
+  max-width: 16rem;
+  font-variant-numeric: tabular-nums;
+}
+
+arnes-shell .composer .context-trigger {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--control-height-compact);
+  padding: var(--space-1) 0;
+  background: transparent;
+  color: inherit;
+  text-align: start;
+}
+
+arnes-shell .composer .context-trigger:hover:not(:disabled) :is(.context-label, .context-helper) {
+  color: var(--color-accent);
+}
+
+context-menu h2 {
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+context-menu dl {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  font-size: var(--font-size-small);
+}
+
+context-menu dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+context-menu dd {
+  margin: 0;
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+context-menu p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--font-size-caption);
+}
+
+arnes-shell .composer .context-compact {
+  justify-self: end;
+}
+
+context-meter .context-label {
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  line-height: 1.25;
+}
+
+context-meter .context-helper {
+  text-align: end;
+  color: var(--color-muted);
+  font-size: var(--font-size-caption);
+  line-height: 1.33333;
+}
+
+context-meter .context-track {
+  grid-column: 1 / -1;
+  height: var(--space-1);
+  overflow: hidden;
+  background: var(--color-border);
+}
+
+context-meter .context-bar {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  context-meter .context-bar {
+    transition: width 160ms var(--motion-easing);
+  }
+}
+
+@media (forced-colors: active) {
+  context-meter .context-track {
+    outline: 1px solid CanvasText;
+  }
+
+  context-meter .context-bar {
+    background: Highlight;
+    forced-color-adjust: none;
+  }
+}
+
+.composer-model-overview,
+.composer-model-facts {
+  min-width: 0;
+}
+
+.composer-model-overview {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  align-items: start;
+  justify-items: start;
+  gap: var(--space-2);
+}
+
+.composer-model-details .composer-model-overview p {
+  margin: 0;
+}
+
+.composer-model-facts {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: var(--space-2);
+  font-size: var(--font-size-caption);
+}
+
+.model-capabilities,
+.model-pricing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.model-capabilities {
+  justify-content: flex-end;
+}
+
+.model-capabilities li {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-subtle);
+  color: var(--color-muted);
+}
+
+.model-cost {
+  display: grid;
+  align-self: end;
+  justify-items: end;
+  gap: var(--space-1);
+  text-align: end;
+}
+
+.composer-model-facts :is(a, small) {
+  font-size: inherit;
+}
+
+.model-pricing li {
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.model-pricing {
+  justify-content: flex-end;
+  gap: var(--space-1) var(--space-3);
+}
+
+@media (min-width: 40.001rem) and (max-width: 56rem), (max-width: 28rem) {
+  arnes-shell .composer-model-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.composer-model-details .provider-logo {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.composer-model-details h3 {
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.composer-model-details a {
+  font-size: var(--font-size-small);
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 40rem) {
+  arnes-shell .composer-settings {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  arnes-shell .composer-model-settings {
+    padding-inline-end: 0;
+    padding-block-end: var(--space-4);
+    border-inline-end: 0;
+    border-block-end: var(--border);
+  }
+}
+
+arnes-shell .composer-settings label {
+  font-size: var(--font-size-small);
+  min-width: 0;
+  max-width: 100%;
+  gap: var(--space-1);
+}
+
+arnes-shell .composer button {
+  flex-shrink: 0;
+  min-height: var(--control-height);
+  padding: var(--space-3) var(--space-4);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-button);
+  color: var(--color-on-button);
+  cursor: pointer;
+}
+
+arnes-shell .composer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-2);
+}
+
+arnes-shell .composer .composer-settings-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+  min-height: var(--control-height-compact);
+  padding: var(--space-1) var(--space-2);
+  background: transparent;
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  text-align: start;
+}
+
+arnes-shell .composer-settings-summary {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+arnes-shell .composer-settings-chevron,
+.settings-chevron {
+  flex-shrink: 0;
+  width: var(--chevron-size);
+  height: var(--chevron-size);
+}
+
+arnes-shell .composer .composer-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height);
+  padding: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-muted);
+}
+
+arnes-shell .composer .composer-send:disabled {
+  background: transparent;
+  color: var(--color-disabled);
+}
+
+arnes-shell .composer textarea:focus-visible {
+  outline: none;
+}
+
+arnes-shell .composer output:not(:empty) {
+  display: block;
+  margin-top: var(--space-4);
+  color: var(--color-muted);
+  font-size: inherit;
+  line-height: var(--line-height-body);
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+label {
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+#app {
+  position: fixed;
+  top: var(--app-viewport-top, 0px);
+  left: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  height: var(--app-viewport-height, 100dvh);
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-messages,
+arnes-composer {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: var(--border);
+}
+
+.app-header-title {
+  margin-inline-end: auto;
+  padding-inline-start: var(--space-4);
+  font-family: "Gidole", sans-serif;
+  font-weight: 400;
+}
+
+.app-header button,
+.app-page .icon-control:not([hidden]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height);
+  height: var(--control-height);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.app-header svg,
+.icon-control svg,
+arnes-shell .composer-send svg,
+.conversation-actions svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.app-messages {
+  min-inline-size: 0;
+  overflow: auto;
+  padding: var(--space-6) var(--space-4);
+  scrollbar-gutter: stable;
+}
+
+arnes-messages {
+  display: contents;
+}
+
+arnes-app > arnes-shell {
+  display: contents;
+}
+
+.chat-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.chat-welcome h1 {
+  margin: 0;
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+}
+
+.chat-welcome p {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--color-muted);
+}
+
+arnes-composer {
+  display: block;
+}
+
+.arnes-message {
+  margin-block: 0 var(--space-6);
+  overflow-wrap: anywhere;
+}
+
+.arnes-message[data-role='user'] {
+  white-space: pre-wrap;
+}
+
+.arnes-message > :first-child {
+  margin-block-start: 0;
+}
+
+.arnes-message > :last-child {
+  margin-block-end: 0;
+}
+
+.message-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+}
+
+.message-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height-small);
+  height: var(--control-height-small);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.message-actions button svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.message-actions button:hover:not(:disabled) {
+  color: var(--color-accent);
+}
+
+.message-actions button[data-copied='true'] {
+  color: var(--color-success);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .message-actions button[data-copied='true'] svg {
+    animation: copy-confirmation-flip 200ms var(--motion-easing);
+  }
+
+  .message-actions button[data-copied='false'] svg {
+    animation: copy-reset-flip 200ms var(--motion-easing);
+  }
+}
+
+@keyframes copy-reset-flip {
+  from {
+    transform: rotateY(-90deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes copy-confirmation-flip {
+  from {
+    transform: rotateY(90deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+.message-actions button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.message-actions button:disabled {
+  color: var(--color-disabled);
+  cursor: wait;
+}
+
+.arnes-message pre {
+  overflow-x: auto;
+  padding: var(--space-4);
+  background: var(--color-surface-subtle);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  font-size: inherit;
+  white-space: pre;
+}
+
+.arnes-message table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.arnes-message th,
+.arnes-message td {
+  padding: var(--space-2);
+  border: var(--border);
+}
+
+.arnes-message img {
+  max-width: 100%;
+  height: auto;
+}
+
+general-settings,
+language-settings,
+theme-settings,
+assistant-settings,
+providers-settings,
+provider-settings,
+search-engine-settings,
+data-control-settings,
+about-settings {
+  display: block;
+}
+
+conversation-list {
+  display: block;
+}
+
+.conversation-list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.conversation-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-1) var(--space-4);
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+
+.conversation-list li[data-pinned='true'] + li[data-pinned='false'] {
+  border-top: var(--border);
+  padding-block-start: var(--space-4);
+}
+
+.conversation-list time {
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+}
+
+.app-page .conversation-group-title {
+  grid-column: 1 / -1;
+  margin-block-end: var(--space-2);
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+}
+
+.conversation-actions {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-1);
+}
+
+.field-status {
+  display: block;
+}
+
+.provider-logo {
+  display: block;
+  margin-block: var(--space-3);
+  object-fit: contain;
+}
+
+.provider-logo svg {
+  filter: var(--logo-filter);
+}
+
+.provider-logo span,
+.provider-logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.provider-logo-themed svg {
+  filter: none;
+}
+
+.provider-logo-themed .logo-light {
+  display: var(--logo-light-display, inline);
+}
+
+.provider-logo-themed .logo-dark {
+  display: var(--logo-dark-display, none);
+}
+
+app-icons {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.app-page h1 {
+  margin: 0 0 var(--space-6);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+}
+
+.app-page :is(h2, h3) {
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.app-page a,
+.composer-model-details a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+.app-page button,
+arnes-shell .composer .context-compact {
+  min-height: var(--control-height-small);
+  padding: var(--space-2) var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: inherit;
+  font-size: var(--font-size-small);
+  cursor: pointer;
+}
+
+arnes-shell .composer button:not(.composer-settings-trigger, .context-trigger, .context-compact):hover:not(:disabled),
+.app-page button:hover:not(:disabled) {
+  background: var(--color-hover);
+}
+
+.app-page .icon-control:hover:not(:disabled) {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.app-page :is(a, button, input, select, textarea, summary):focus-visible,
+.app-header button:focus-visible,
+arnes-shell .composer :is(a, select, button):focus-visible,
+arnes-shell .composer-bar:has(textarea:focus-visible) {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.app-page :is(button, input, select, textarea):disabled,
+.app-page .conversation-actions button:disabled,
+arnes-shell .composer :is(select, button):disabled {
+  background: var(--color-surface-subtle);
+  color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.settings-page details {
+  border-bottom: var(--border);
+}
+
+.settings-page summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--control-height);
+  padding: var(--space-3) 0;
+  border-radius: var(--radius-control);
+  list-style: none;
+  cursor: pointer;
+}
+
+.settings-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.settings-page .settings-chevron {
+  color: var(--color-muted);
+  transform: rotate(-90deg);
+}
+
+a:hover,
+.app-header button:hover,
+.app-page a:hover,
+.composer-model-details a:hover,
+arnes-shell .composer .composer-settings-trigger:hover:not(:disabled),
+arnes-shell .composer .context-compact:hover:not(:disabled),
+.settings-page summary:hover,
+.settings-page summary:hover > .settings-chevron {
+  color: var(--color-accent);
+}
+
+.settings-page details[open] > summary > .settings-chevron {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .settings-page .settings-chevron {
+    transition: transform var(--motion-duration-expand) var(--motion-easing);
+  }
+
+  /* Unsupported browsers retain native, instant disclosure behavior. */
+  @supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+    .settings-page details::details-content {
+      interpolate-size: allow-keywords;
+      block-size: 0;
+      overflow: clip;
+      transition:
+        block-size var(--motion-duration-expand) var(--motion-easing),
+        content-visibility var(--motion-duration-expand) allow-discrete;
+    }
+
+    .settings-page details[open]::details-content {
+      block-size: auto;
+    }
+  }
+}
+
+.settings-page form,
+.settings-page .about-content,
+.settings-page :is(language-settings, theme-settings) {
+  margin: var(--space-4) 0;
+}
+
+.settings-page fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius-control);
+}
+
+.settings-page about-settings textarea {
+  height: 20rem;
+  overflow-y: auto;
+  resize: vertical;
+}
+
+.settings-page legend {
+  padding-inline: var(--space-2);
+}
+
+.settings-page p,
+.composer-model-details p {
+  margin: 0 0 var(--space-4);
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  overflow-wrap: anywhere;
+}
+
+.settings-page .settings-intro {
+  margin-bottom: var(--space-6);
+}
+
+.settings-page .settings-intro p {
+  margin: 0;
+}
+
+.settings-page .settings-intro p + p {
+  margin-top: var(--space-1);
+}
+
+.settings-page label {
+  margin-bottom: var(--space-2);
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+}
+
+.settings-page :is(input, select, textarea) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--control-height);
+  padding: var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+}
+
+.settings-page fieldset > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.settings-page output {
+  display: block;
+  width: 100%;
+  min-height: 1.5em;
+  margin-block: var(--space-2);
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  text-align: start;
+}
+
+.settings-page output:empty {
+  visibility: hidden;
+}
+
+.settings-page :is(language-settings, theme-settings) output {
+  margin-block: var(--space-1) 0;
+}
+
+.settings-page :is(language-settings, theme-settings) output:empty {
+  display: none;
+}
+
+.settings-page fieldset > div > output {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+}
+
+.settings-page output[data-state='saved'] {
+  color: var(--color-success);
+}
+
+.settings-page p > a + a {
+  margin-inline-start: var(--space-4);
+}
+
+.app-page .conversation-open {
+  display: grid;
+  gap: var(--space-1);
+  padding-block: var(--space-3);
+  min-width: 0;
+  border: 0;
+  font-size: inherit;
+  text-align: start;
+  text-decoration: none;
+}
+
+.conversation-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: var(--font-weight-semibold);
+}
+
+.conversation-open:is(:hover, :focus-visible) .conversation-title {
+  color: var(--color-accent);
+}
+
+.app-page .conversation-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height-small);
+  height: var(--control-height-small);
+  min-height: var(--control-height-small);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  color: var(--color-muted);
+}
+
+.app-page .conversation-actions button:hover:not(:disabled),
+.app-page .conversation-actions button[aria-pressed='true']:not(:disabled) {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.settings-page form[name='reset'] button:not(:disabled) {
+  color: var(--color-danger);
+}
+
+.app-page conversation-list > [role='status'] {
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+}
+
+.app-page conversation-list > [role='status']:empty {
+  display: none;
+}

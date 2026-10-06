@@ -1,0 +1,755 @@
+
+#. js-lingui-explicit-id
+msgid "An AI harness in a single HTML file. Run it in your browser, on your computer or your phone."
+msgstr "An AI harness in a single HTML file. Run it in your browser, on your computer or your phone."
+
+#. js-lingui-explicit-id
+msgid "On your computer. On your phone."
+msgstr "On your computer. On your phone."
+
+#. js-lingui-explicit-id
+msgid "Open it in your browser or install it as a PWA. No app store or powerful hardware required. Your AI providers run the models."
+msgstr "Open it in your browser or install it as a PWA. No app store or powerful hardware required. Your AI providers run the models."
+
+#. js-lingui-explicit-id
+msgid "Build it yourself. Take it anywhere."
+msgstr "Build it yourself. Take it anywhere."
+
+#. js-lingui-explicit-id
+msgid "Inspect the source and compile your own copy. The build bundles the app into one portable HTML file, with scripts, styles, fonts, and icons included."
+msgstr "Inspect the source and compile your own copy. The build bundles the app into one portable HTML file, with scripts, styles, fonts, and icons included."
+
+#. js-lingui-explicit-id
+msgid "No server to run."
+msgstr "No server to run."
+
+#. js-lingui-explicit-id
+msgid "Compile it yourself. Take the HTML file with you. Run it in your browser, on your computer or your phone. Hosting is optional."
+msgstr "Compile it yourself. Take the HTML file with you. Run it in your browser, on your computer or your phone. Hosting is optional."
+
+#. js-lingui-explicit-id
+msgid "View build attestations"
+msgstr "View build attestations"
+
+#. js-lingui-explicit-id
+msgid "Copy"
+msgstr "Copy"
+
+#. js-lingui-explicit-id
+msgid "Copy response"
+msgstr "Copy response"
+
+#. js-lingui-explicit-id
+msgid "Copied"
+msgstr "Copied"
+
+#. js-lingui-explicit-id
+msgid "Unable to copy. Select the text and copy it manually."
+msgstr "Unable to copy. Select the text and copy it manually."
+
+#. js-lingui-explicit-id
+msgid "Context"
+msgstr "Context"
+
+#. js-lingui-explicit-id
+msgid "Context window usage"
+msgstr "Context window usage"
+
+#. js-lingui-explicit-id
+msgid "Token usage is available after the model reports it."
+msgstr "Token usage is available after the model reports it."
+
+#. js-lingui-explicit-id
+msgid "Input and output tokens reported for the latest model request, including cached input. Draft text is not included."
+msgstr "Input and output tokens reported for the latest model request, including cached input. Draft text is not included."
+
+#. js-lingui-explicit-id
+msgid "Unable to compact this conversation."
+msgstr "Unable to compact this conversation."
+
+#. js-lingui-explicit-id
+msgid "No conversation to compact."
+msgstr "No conversation to compact."
+
+#. js-lingui-explicit-id
+msgid "Context used"
+msgstr "Context used"
+
+#. js-lingui-explicit-id
+msgid "Total estimated cost"
+msgstr "Total estimated cost"
+
+#. js-lingui-explicit-id
+msgid "Compacting…"
+msgstr "Compacting…"
+
+#. js-lingui-explicit-id
+msgid "Compact now"
+msgstr "Compact now"
+
+#. js-lingui-explicit-id
+msgid "Context compacted."
+msgstr "Context compacted."
+
+#. js-lingui-explicit-id
+msgid "Estimated context after compaction. Updated on the next model request."
+msgstr "Estimated context after compaction. Updated on the next model request."
+
+#. js-lingui-explicit-id
+msgid "Welcome"
+msgstr "Welcome"
+
+#. js-lingui-explicit-id
+msgid "Ask a question, explore an idea, or start with whatever is on your mind."
+msgstr "Ask a question, explore an idea, or start with whatever is on your mind."
+
+#. js-lingui-explicit-id
+msgid "Install arnes"
+msgstr "Install arnes"
+
+#. js-lingui-explicit-id
+msgid "Unable to open installation. Try installing from your browser menu."
+msgstr "Unable to open installation. Try installing from your browser menu."
+
+#. js-lingui-explicit-id
+msgid "Made with Web Components. No UI frameworks."
+msgstr "Made with Web Components. No UI frameworks."
+
+#. js-lingui-explicit-id
+msgid "Still don’t trust it?"
+msgstr "Still don’t trust it?"
+
+#. js-lingui-explicit-id
+msgid "That’s okay. It’s just HTML, JavaScript, and CSS."
+msgstr "That’s okay. It’s just HTML, JavaScript, and CSS."
+
+#. js-lingui-explicit-id
+msgid "Host it yourself"
+msgstr "Host it yourself"
+
+#. js-lingui-explicit-id
+msgid "A fully client-side AI harness that runs in your browser."
+msgstr "A fully client-side AI harness that runs in your browser."
+
+#. js-lingui-explicit-id
+msgid "arnes connects you directly to AI providers that allow browser requests through CORS. No backend, no proxy, no middleman."
+msgstr "arnes connects you directly to AI providers that allow browser requests through CORS. No backend, no proxy, no middleman."
+
+#. js-lingui-explicit-id
+msgid "Your conversations, settings, and API keys are stored on your device. No cloud sync. Requests go directly to your chosen providers, whose data policies apply."
+msgstr "Your conversations, settings, and API keys are stored on your device. No cloud sync. Requests go directly to your chosen providers, whose data policies apply."
+
+#. js-lingui-explicit-id
+msgid "Connect search engines that allow browser requests through CORS. Give your assistant access to the web with your own API keys."
+msgstr "Connect search engines that allow browser requests through CORS. Give your assistant access to the web with your own API keys."
+
+#. js-lingui-explicit-id
+msgid "A browser-native PWA"
+msgstr "A browser-native PWA"
+
+#. js-lingui-explicit-id
+msgid "A progressive web app that runs in your browser and installs directly from it. No app stores required."
+msgstr "A progressive web app that runs in your browser and installs directly from it. No app stores required."
+
+#. js-lingui-explicit-id
+msgid "Source available"
+msgstr "Source available"
+
+#. js-lingui-explicit-id
+msgid "Auditable source code. Public builds. No hidden application code. Inspect what runs in your browser."
+msgstr "Auditable source code. Public builds. No hidden application code. Inspect what runs in your browser."
+
+#. js-lingui-explicit-id
+msgid "About"
+msgstr "About"
+
+#. js-lingui-explicit-id
+msgid "Bring your own API keys to connect the AI providers that power your conversations."
+msgstr "Bring your own API keys to connect the AI providers that power your conversations."
+
+#. js-lingui-explicit-id
+msgid "Learn more about provider support"
+msgstr "Learn more about provider support"
+
+#. js-lingui-explicit-id
+msgid "Your messages and content go directly to the selected provider, with no proxy, middleware, or logging in between."
+msgstr "Your messages and content go directly to the selected provider, with no proxy, middleware, or logging in between."
+
+#. js-lingui-explicit-id
+msgid "To learn how your data is used, consult each provider’s privacy policy."
+msgstr "To learn how your data is used, consult each provider’s privacy policy."
+
+#. js-lingui-explicit-id
+msgid "Give your assistant access to the web. Connect a search engine with your own API key to find fresh information and sources."
+msgstr "Give your assistant access to the web. Connect a search engine with your own API key to find fresh information and sources."
+
+#. js-lingui-explicit-id
+msgid "Learn more about search engine support"
+msgstr "Learn more about search engine support"
+
+#. js-lingui-explicit-id
+msgid "A private, fully client-side AI harness. Your keys. Your models. Your language."
+msgstr "A private, fully client-side AI harness. Your keys. Your models. Your language."
+
+#. js-lingui-explicit-id
+msgid "Free and open-source software licenses"
+msgstr "Free and open-source software licenses"
+
+#. js-lingui-explicit-id
+msgid "Wipe all data from this device? This cannot be undone."
+msgstr "Wipe all data from this device? This cannot be undone."
+
+#. js-lingui-explicit-id
+msgid "Deleting…"
+msgstr "Deleting…"
+
+#. js-lingui-explicit-id
+msgid "Exporting…"
+msgstr "Exporting…"
+
+#. js-lingui-explicit-id
+msgid "Download started."
+msgstr "Download started."
+
+#. js-lingui-explicit-id
+msgid "Unable to wipe data. Try again."
+msgstr "Unable to wipe data. Try again."
+
+#. js-lingui-explicit-id
+msgid "Unable to export data. Try again."
+msgstr "Unable to export data. Try again."
+
+msgid ""
+msgstr ""
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. js-lingui-explicit-id
+#: src/stores/conversation-history.ts:57
+msgid "Untitled conversation"
+msgstr "Untitled conversation"
+
+#. js-lingui-explicit-id
+#: src/stores/conversation-history.ts:80
+msgid "Enter a conversation name."
+msgstr "Enter a conversation name."
+
+#. js-lingui-explicit-id
+#: src/stores/conversation-history.ts:98
+msgid "Conversation not found. Start a new chat or choose another conversation."
+msgstr "Conversation not found. Start a new chat or choose another conversation."
+
+#. js-lingui-explicit-id
+#: src/stores/conversation.ts:81
+msgid "Unable to complete the response."
+msgstr "Unable to complete the response."
+
+#. js-lingui-explicit-id
+#: src/pages/localize.ts:4
+msgid "Settings | arnes"
+msgstr "Settings | arnes"
+
+#. js-lingui-explicit-id
+#: src/pages/localize.ts:5
+msgid "Conversations | arnes"
+msgstr "Conversations | arnes"
+
+#. js-lingui-explicit-id
+#: src/components/app-header.ts:14
+#: src/pages/localize.ts:9
+msgid "Settings"
+msgstr "Settings"
+
+#. js-lingui-explicit-id
+#: src/components/app-header.ts:10
+#: src/pages/localize.ts:10
+msgid "Conversations"
+msgstr "Conversations"
+
+#. js-lingui-explicit-id
+#: src/components/app-header.ts:6
+msgid "Chat"
+msgstr "Chat"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:34
+#: src/components/settings/assistant-settings.ts:6
+msgid "Assistant"
+msgstr "Assistant"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:11
+msgid "Base prompt"
+msgstr "Base prompt"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:12
+msgid "Set the instructions that guide the assistant's responses."
+msgstr "Set the instructions that guide the assistant's responses."
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:14
+msgid "Instructions"
+msgstr "Instructions"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:19
+msgid "Save prompt"
+msgstr "Save prompt"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:26
+msgid "Memory"
+msgstr "Memory"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:27
+msgid "Review and edit what the assistant remembers across conversations."
+msgstr "Review and edit what the assistant remembers across conversations."
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:29
+msgid "Saved memory"
+msgstr "Saved memory"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:34
+msgid "Save memory"
+msgstr "Save memory"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:35
+msgid "Clear memory"
+msgstr "Clear memory"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:65
+#: src/components/settings/general-settings.ts:35
+#: src/components/settings/provider-settings.ts:107
+msgid "Loading…"
+msgstr "Loading…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:76
+#: src/components/settings/assistant-settings.ts:72
+#: src/components/settings/general-settings.ts:42
+msgid "Unable to load settings. Reload to try again."
+msgstr "Unable to load settings. Reload to try again."
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:88
+#: src/components/settings/general-settings.ts:55
+#: src/components/settings/provider-settings.ts:130
+msgid "Saving…"
+msgstr "Saving…"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:92
+msgid "Saved"
+msgstr "Saved"
+
+#. js-lingui-explicit-id
+#: src/components/settings/assistant-settings.ts:94
+#: src/components/settings/general-settings.ts:61
+msgid "Unable to save settings. Try again."
+msgstr "Unable to save settings. Try again."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:4
+msgid "Data Control"
+msgstr "Data Control"
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:9
+#: src/components/settings/data-control-settings.ts:14
+msgid "Export my data"
+msgstr "Export my data"
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:10
+msgid "Download a JSON file containing your saved conversations, checkpoints, memory, and settings."
+msgstr "Download a JSON file containing your saved conversations, checkpoints, memory, and settings."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:11
+msgid "Includes your saved API keys in plain text. Keep this file private."
+msgstr "Includes your saved API keys in plain text. Keep this file private."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:21
+#: src/components/settings/data-control-settings.ts:25
+msgid "Wipe all data"
+msgstr "Wipe all data"
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:22
+msgid "Delete all saved conversations, checkpoints, API keys, memory, base prompt, model selection, and preferences from this device. This cannot be undone."
+msgstr "Delete all saved conversations, checkpoints, API keys, memory, base prompt, model selection, and preferences from this device. This cannot be undone."
+
+#. js-lingui-explicit-id
+#: src/components/settings/general-settings.ts:5
+msgid "General"
+msgstr "General"
+
+#. js-lingui-explicit-id
+#: src/components/settings/general-settings.ts:7
+msgid "Language"
+msgstr "Language"
+
+#. js-lingui-explicit-id
+#: src/components/settings/general-settings.ts:9
+msgid "Use browser language"
+msgstr "Use browser language"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:17
+msgid "A cloud platform for running, fine-tuning, and training AI models."
+msgstr "A cloud platform for running, fine-tuning, and training AI models."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:26
+msgid "Access Claude models through the Anthropic API."
+msgstr "Access Claude models through the Anthropic API."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:35
+msgid "Access OpenAI models through the OpenAI API."
+msgstr "Access OpenAI models through the OpenAI API."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:44
+msgid "A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."
+msgstr "A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:64
+msgid "Visit website"
+msgstr "Visit website"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:65
+msgid "Privacy policy"
+msgstr "Privacy policy"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:67
+msgid "{provider} is not affiliated with or an endorser of this project."
+msgstr "{provider} is not affiliated with or an endorser of this project."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:69
+msgid "API key"
+msgstr "API key"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:70
+msgid "Enter a non-empty API key"
+msgstr "Enter a non-empty API key"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:73
+msgid "Save key"
+msgstr "Save key"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:114
+msgid "Unable to load API key. Reload to try again."
+msgstr "Unable to load API key. Reload to try again."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:134
+msgid "API key saved."
+msgstr "API key saved."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:136
+msgid "Unable to save API key. Try again."
+msgstr "Unable to save API key. Try again."
+
+#. js-lingui-explicit-id
+#: src/components/settings/providers-settings.ts:5
+msgid "Providers"
+msgstr "Providers"
+
+#. js-lingui-explicit-id
+#: src/components/settings/search-engine-settings.ts:5
+msgid "Search engines"
+msgstr "Search engines"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:10
+msgid "Loading conversations…"
+msgstr "Loading conversations…"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:11
+msgid "Saved conversations"
+msgstr "Saved conversations"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:39
+msgid "Unpin"
+msgstr "Unpin"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:39
+msgid "Pin"
+msgstr "Pin"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:39
+msgid "Rename"
+msgstr "Rename"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:39
+msgid "Delete"
+msgstr "Delete"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:40
+msgid "{action} {title}"
+msgstr "{action} {title}"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:51
+msgid "Conversation name"
+msgstr "Conversation name"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:57
+msgid "Delete “{title}”? This cannot be undone."
+msgstr "Delete “{title}”? This cannot be undone."
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:96
+msgid "Unable to update conversation. Try again."
+msgstr "Unable to update conversation. Try again."
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:132
+msgid "No conversations yet."
+msgstr "No conversations yet."
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:134
+msgid "Unable to load conversations. Reload to try again."
+msgstr "Unable to load conversations. Reload to try again."
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:13
+msgid "User message"
+msgstr "User message"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:17
+msgid "Model"
+msgstr "Model"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:18
+msgid "Effort"
+msgstr "Effort"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:19
+msgid "Submit"
+msgstr "Submit"
+
+#. js-lingui-explicit-id
+msgid "Stop generation"
+msgstr "Stop generation"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:65
+msgid "Loading settings…"
+msgstr "Loading settings…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:85
+msgid "Select a model"
+msgstr "Select a model"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:114
+msgid "Low"
+msgstr "Low"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:115
+msgid "Medium"
+msgstr "Medium"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:116
+msgid "High"
+msgstr "High"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:152
+msgid "Unable to save selection. Try again."
+msgstr "Unable to save selection. Try again."
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:11
+msgid "Conversation"
+msgstr "Conversation"
+
+#. js-lingui-explicit-id
+msgid "Theme"
+msgstr "Theme"
+
+#. js-lingui-explicit-id
+msgid "System"
+msgstr "System"
+
+#. js-lingui-explicit-id
+msgid "Light"
+msgstr "Light"
+
+#. js-lingui-explicit-id
+msgid "Dark"
+msgstr "Dark"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:34
+msgid "You"
+msgstr "You"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:38
+msgid "Responding…"
+msgstr "Responding…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-shell.ts:66
+msgid "Loading conversation…"
+msgstr "Loading conversation…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-shell.ts:75
+msgid "Unable to load conversation. Reload to try again."
+msgstr "Unable to load conversation. Reload to try again."
+
+#. js-lingui-explicit-id
+msgid "Advanced reasoning for complex coding, research, and problem solving."
+msgstr "Advanced reasoning for complex coding, research, and problem solving."
+
+#. js-lingui-explicit-id
+msgid "Balances capability and cost for coding and everyday work."
+msgstr "Balances capability and cost for coding and everyday work."
+
+#. js-lingui-explicit-id
+msgid "A fast, economical model for everyday tasks and high-volume requests."
+msgstr "A fast, economical model for everyday tasks and high-volume requests."
+
+#. js-lingui-explicit-id
+msgid "Built for complex coding, knowledge work, and sustained problem solving."
+msgstr "Built for complex coding, knowledge work, and sustained problem solving."
+
+#. js-lingui-explicit-id
+msgid "A capable Claude model for demanding coding and professional work."
+msgstr "A capable Claude model for demanding coding and professional work."
+
+#. js-lingui-explicit-id
+msgid "A faster, lower-cost alternative to Opus for everyday work."
+msgstr "A faster, lower-cost alternative to Opus for everyday work."
+
+#. js-lingui-explicit-id
+msgid "A small, fast Claude model for responsive chat and efficient coding."
+msgstr "A small, fast Claude model for responsive chat and efficient coding."
+
+#. js-lingui-explicit-id
+msgid "A compact DeepSeek model focused on speed and efficiency."
+msgstr "A compact DeepSeek model focused on speed and efficiency."
+
+#. js-lingui-explicit-id
+msgid "An open GLM model from Z.ai for reasoning and coding."
+msgstr "An open GLM model from Z.ai for reasoning and coding."
+
+#. js-lingui-explicit-id
+msgid "Meta’s open 30-billion-parameter model, built for agent workflows."
+msgstr "Meta’s open 30-billion-parameter model, built for agent workflows."
+
+#. js-lingui-explicit-id
+msgid "An open model from Thinking Machines Lab for reasoning, coding, and tool use."
+msgstr "An open model from Thinking Machines Lab for reasoning, coding, and tool use."
+
+#. js-lingui-explicit-id
+msgid "A MiniMax model built for coding, long-context tasks, and agent workflows."
+msgstr "A MiniMax model built for coding, long-context tasks, and agent workflows."
+
+#. js-lingui-explicit-id
+msgid "A compact 9-billion-parameter model from the Qwen3.5 family."
+msgstr "A compact 9-billion-parameter model from the Qwen3.5 family."
+
+#. js-lingui-explicit-id
+msgid "Select a model to see its details."
+msgstr "Select a model to see its details."
+
+#. js-lingui-explicit-id
+msgid "Text"
+msgstr "Text"
+
+#. js-lingui-explicit-id
+msgid "Vision"
+msgstr "Vision"
+
+#. js-lingui-explicit-id
+msgid "Audio"
+msgstr "Audio"
+
+#. js-lingui-explicit-id
+msgid "Tool use"
+msgstr "Tool use"
+
+#. js-lingui-explicit-id
+msgid "Reasoning"
+msgstr "Reasoning"
+
+#. js-lingui-explicit-id
+msgid "Model capabilities"
+msgstr "Model capabilities"
+
+#. js-lingui-explicit-id
+msgid "Cost"
+msgstr "Cost"
+
+#. js-lingui-explicit-id
+msgid "USD per 1M text tokens · standard rates"
+msgstr "USD per 1M text tokens · standard rates"
+
+#. js-lingui-explicit-id
+msgid "Input"
+msgstr "Input"
+
+#. js-lingui-explicit-id
+msgid "Output"
+msgstr "Output"
+
+#. js-lingui-explicit-id
+msgid "Cached input"
+msgstr "Cached input"
+
+#. js-lingui-explicit-id
+msgid "Higher rates apply to long contexts."
+msgstr "Higher rates apply to long contexts."
+
+#. js-lingui-explicit-id
+msgid "Provider pricing"
+msgstr "Provider pricing"
+
+#. js-lingui-explicit-id
+msgid "USD / 1M tokens"
+msgstr "USD / 1M tokens"
+
+#. js-lingui-explicit-id
+msgid "Pinned"
+msgstr "Pinned"
+
+#. js-lingui-explicit-id
+msgid "All conversations"
+msgstr "All conversations"

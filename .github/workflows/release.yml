@@ -1,0 +1,66 @@
+name: Release portable HTML
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'New release tag (for example, v0.1.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portable-html-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Validate new release tag
+        shell: bash
+        run: |
+          git check-ref-format "refs/tags/$RELEASE_TAG"
+          if [[ "$RELEASE_TAG" == -* ]] || git show-ref --verify --quiet "refs/tags/$RELEASE_TAG"; then
+            echo 'Choose a new tag that does not start with a dash.' >&2
+            exit 1
+          fi
+      - uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        with:
+          deno-version: '2.7.5'
+      - name: Install locked dependencies
+        run: deno install --frozen --node-modules-dir=auto
+      - name: Build portable HTML
+        run: |
+          deno run -A --frozen node_modules/typescript/lib/tsc.js
+          deno run -A --frozen node_modules/vite/bin/vite.js build --base ./
+          test -s dist/index.html
+      - name: Attest portable HTML
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: dist/index.html
+      - name: Create release with HTML attachment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$RELEASE_TAG" dist/index.html \
+            --target "$GITHUB_SHA" \
+            --title "$RELEASE_TAG" \
+            --generate-notes \
+            --draft
+          gh release edit "$RELEASE_TAG" --draft=false

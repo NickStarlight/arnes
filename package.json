@@ -1,0 +1,33 @@
+{
+  "name": "arnes",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "i18n:extract": "lingui extract --workers 1"
+  },
+  "dependencies": {
+    "@langchain/langgraph-checkpoint": "^1.1.5",
+    "@langchain/anthropic": "^1.5.12",
+    "@langchain/openai": "^1.6.2",
+    "@langchain/together-ai": "~0.2.17",
+    "@lingui/core": "^6.9.0",
+    "dexie": "^4.4.6",
+    "dompurify": "^3.4.16",
+    "langchain": "^1.5.15",
+    "marked": "^18.0.14",
+    "marked-footnote": "^1.4.0",
+    "modern-normalize": "^3.0.1"
+  },
+  "devDependencies": {
+    "@lingui/cli": "^6.9.0",
+    "@lingui/vite-plugin": "^6.9.0",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.2",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}

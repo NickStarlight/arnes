@@ -1,0 +1,21 @@
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-text: #f4f4f4;
+  --color-muted: #c6c6c6;
+  --color-disabled: #8d8d8d;
+  --color-surface: #000;
+  --color-surface-subtle: #262626;
+  --color-hover: #393939;
+  --color-border: #393939;
+  --color-button: #f4f4f4;
+  --color-on-button: #161616;
+  --color-accent: #78a9ff;
+  --color-link: #78a9ff;
+  --color-danger: #ff8389;
+  --color-success: #42be65;
+  --shadow-popover: 0 2px 6px #00000066;
+  --logo-filter: brightness(0) invert(1);
+  --logo-light-display: none;
+  --logo-dark-display: inline;
+}
