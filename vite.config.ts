@@ -1,37 +1,41 @@
-import { fileURLToPath } from 'node:url'
-import { defineConfig, type PluginOption, type UserConfig } from 'vite'
+import { defineConfig, type ConfigEnv, type PluginOption } from 'vite'
 import { lingui } from '@lingui/vite-plugin'
 import { viteSingleFile } from 'vite-plugin-singlefile'
 
 const plugins: PluginOption[] = [
   ...lingui({
-    configPath: fileURLToPath(new URL('./lingui.config.ts', import.meta.url)),
+    configPath: `${import.meta.dirname}/lingui.config.ts`,
     failOnMissing: 'catalog',
     failOnCompileError: true,
   }),
   viteSingleFile({ useRecommendedBuildConfig: false }),
 ]
 
-const config: UserConfig = {
-  plugins,
-  root: 'src/pages',
-  publicDir: '../../public',
-  build: {
-    outDir: '../../dist',
-    emptyOutDir: true,
-    copyPublicDir: false,
-    cssCodeSplit: false,
-    modulePreload: false,
-    assetsInlineLimit: Number.MAX_SAFE_INTEGER,
-    rolldownOptions: { output: { codeSplitting: false } },
-  },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '/src': fileURLToPath(new URL('./src', import.meta.url)),
+/** Adds hosted installation assets only to Pages builds, keeping portable releases self-contained. */
+function createConfig({ mode }: ConfigEnv) {
+  const isPages = mode === 'pages'
+
+  return {
+    plugins,
+    root: 'src/pages',
+    publicDir: isPages ? `${import.meta.dirname}/src/pwa/public` : '../../public',
+    build: {
+      outDir: '../../dist',
+      emptyOutDir: true,
+      copyPublicDir: isPages,
+      cssCodeSplit: false,
+      modulePreload: false,
+      assetsInlineLimit: Number.MAX_SAFE_INTEGER,
+      rolldownOptions: { output: { codeSplitting: false } },
     },
-    tsconfigPaths: true,
-  },
+    resolve: {
+      alias: {
+        '@': `${import.meta.dirname}/src`,
+        '/src': `${import.meta.dirname}/src`,
+      },
+      tsconfigPaths: true,
+    },
+  }
 }
 
-export default defineConfig(config)
+export default defineConfig(createConfig)

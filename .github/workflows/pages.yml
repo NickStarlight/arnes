@@ -39,7 +39,7 @@ jobs:
           PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
         run: |
           deno run -A --frozen node_modules/typescript/lib/tsc.js
-          deno run -A --frozen node_modules/vite/bin/vite.js build --base "$PAGES_BASE"
+          deno run -A --frozen node_modules/vite/bin/vite.js build --mode pages --base "$PAGES_BASE"
       - name: Create file manifest
         run: deno run -A scripts/create-deployment-manifest.ts dist "$GITHUB_SHA"
       - name: Attest file manifest

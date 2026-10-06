@@ -48,7 +48,7 @@ jobs:
       - name: Build portable HTML
         run: |
           deno run -A --frozen node_modules/typescript/lib/tsc.js
-          deno run -A --frozen node_modules/vite/bin/vite.js build --base ./
+          deno run -A --frozen node_modules/vite/bin/vite.js build --mode portable --base ./
           test -s dist/index.html
       - name: Attest portable HTML
         uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
