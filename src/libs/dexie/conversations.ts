@@ -31,6 +31,17 @@ export async function deleteConversationRecords(threadId: string): Promise<void>
   )
 }
 
+/** Removes every saved thread and all presentation metadata in one commit, keeping other settings intact. */
+export async function deleteAllConversationRecords(): Promise<void> {
+  await database.transaction('rw', database.conversations, database.checkpoints, database.writes,
+    async () => {
+      await database.conversations.clear()
+      await database.checkpoints.clear()
+      await database.writes.clear()
+    },
+  )
+}
+
 /** Reads only the latest root checkpoint per thread, newest first, without loading task writes. */
 export async function listConversationCheckpoints(): Promise<{ threadId: string, checkpoint: Checkpoint }[]> {
   const records = await database.checkpoints.orderBy('id').reverse().toArray()

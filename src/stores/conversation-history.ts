@@ -2,6 +2,7 @@ import { i18n } from '@/i18n.ts'
 import { AIMessage, type BaseMessage } from 'langchain'
 import { readContextUsage } from '@/agents/context-usage.ts'
 import {
+  deleteAllConversationRecords,
   deleteConversationRecords,
   getConversationCheckpoint,
   listConversationCheckpoints,
@@ -96,6 +97,11 @@ export async function pinConversation(threadId: string, pinned: boolean): Promis
 /** Deletes saved history along with its custom name and pin state. */
 export async function deleteConversation(threadId: string): Promise<void> {
   await deleteConversationRecords(threadId)
+}
+
+/** Deletes every saved conversation along with all custom names and pin states. */
+export async function deleteAllConversations(): Promise<void> {
+  await deleteAllConversationRecords()
 }
 
 /** Distinguishes a missing conversation from an empty saved history. */

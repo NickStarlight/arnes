@@ -54,7 +54,6 @@ const views: Record<string, View> = {
   conversations: {
     title: i18n._('Conversations | arnes'),
     content: `<app-header></app-header><main class="app-messages app-page">
-      <h1>${i18n._('Conversations')}</h1>
       <conversation-list></conversation-list>
     </main>`,
   },

@@ -516,6 +516,18 @@ msgid "Unable to update conversation. Try again."
 msgstr "Unable to update conversation. Try again."
 
 #. js-lingui-explicit-id
+msgid "Delete all conversations"
+msgstr "Delete all conversations"
+
+#. js-lingui-explicit-id
+msgid "Delete all conversations? This cannot be undone."
+msgstr "Delete all conversations? This cannot be undone."
+
+#. js-lingui-explicit-id
+msgid "Unable to delete conversations. Try again."
+msgstr "Unable to delete conversations. Try again."
+
+#. js-lingui-explicit-id
 #: src/components/conversations/conversation-list.ts:132
 msgid "No conversations yet."
 msgstr "No conversations yet."

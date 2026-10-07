@@ -1229,6 +1229,22 @@ arnes-shell .composer .context-compact:hover:not(:disabled),
   color: var(--color-danger);
 }
 
+.app-page .conversation-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-6);
+}
+
+.app-page .conversation-heading h1 {
+  margin: 0;
+}
+
+.app-page .conversation-heading [data-action='delete-all']:hover:not(:disabled) {
+  color: var(--color-danger);
+}
+
 .app-page conversation-list > [role='status'] {
   color: var(--color-muted);
   font-size: var(--font-size-small);

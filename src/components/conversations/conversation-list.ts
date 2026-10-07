@@ -1,5 +1,6 @@
 import { i18n } from '@/i18n.ts'
 import {
+  deleteAllConversations,
   deleteConversation,
   listConversations,
   pinConversation,
@@ -7,7 +8,13 @@ import {
   type ConversationSummary,
 } from '@/stores/conversation-history.ts'
 
-const template = `<p role="status">${i18n._("Loading conversations…")}</p>
+const template = `<div class="conversation-heading">
+  <h1>${i18n._('Conversations')}</h1>
+  <button type="button" class="icon-control" data-action="delete-all" title="${i18n._("Delete all conversations")}" aria-label="${i18n._("Delete all conversations")}" disabled>
+    <svg aria-hidden="true" focusable="false"><use href="#delete-icon" /></svg>
+  </button>
+</div>
+<p role="status">${i18n._("Loading conversations…")}</p>
 <ul class="conversation-list" aria-label="${i18n._("Saved conversations")}"></ul>`
 
 /** Uses text nodes for saved content so conversation titles cannot introduce markup. */
@@ -89,9 +96,16 @@ class ConversationList extends HTMLElement {
   /** Serializes row actions and keeps storage failures visible without discarding the current list. */
   private handleAction = async (event: Event): Promise<void> => {
     const button = event.target instanceof Element ? event.target.closest<HTMLButtonElement>('button[data-action]') : null
-    const threadId = button?.closest<HTMLElement>('[data-thread-id]')?.dataset.threadId
+    if (!button || this.busy) return
+
+    if (button.dataset.action === 'delete-all') {
+      await this.deleteAll(button)
+      return
+    }
+
+    const threadId = button.closest<HTMLElement>('[data-thread-id]')?.dataset.threadId
     const conversation = threadId ? this.conversations.get(threadId) : undefined
-    if (!button || !conversation || this.busy) return
+    if (!conversation) return
 
     this.busy = true
     this.setButtonsDisabled(true)
@@ -113,9 +127,32 @@ class ConversationList extends HTMLElement {
     }
   }
 
+  /** Confirms and deletes every saved conversation, then refreshes the emptied list. */
+  private deleteAll = async (button: HTMLButtonElement): Promise<void> => {
+    if (!window.confirm(i18n._("Delete all conversations? This cannot be undone."))) return
+
+    this.busy = true
+    this.setButtonsDisabled(true)
+    const status = this.querySelector<HTMLElement>('[role="status"]')!
+    status.textContent = ''
+
+    try {
+      await deleteAllConversations()
+      await this.load()
+    } catch (error) {
+      status.textContent = error instanceof Error ? error.message : i18n._("Unable to delete conversations. Try again.")
+    } finally {
+      this.busy = false
+      this.setButtonsDisabled(false)
+      button.focus()
+    }
+  }
+
   /** Prevents overlapping writes while an action or its list refresh is pending. */
   private setButtonsDisabled(disabled: boolean): void {
-    for (const button of Array.from(this.querySelectorAll('button'))) button.disabled = disabled
+    for (const button of Array.from(this.querySelectorAll('button'))) {
+      button.disabled = disabled || (button.dataset.action === 'delete-all' && this.conversations.size === 0)
+    }
   }
 
   /** Keeps loading, empty, and storage failure states visible without requiring model credentials. */
@@ -154,6 +191,7 @@ class ConversationList extends HTMLElement {
       status.textContent = i18n._("Unable to load conversations. Reload to try again.")
     } finally {
       this.setAttribute('aria-busy', 'false')
+      this.setButtonsDisabled(this.busy)
     }
   }
 }
