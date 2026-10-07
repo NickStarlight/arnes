@@ -172,6 +172,7 @@ arnes-shell .app-messages {
 
 arnes-shell .chat-turn {
   display: flow-root;
+  scroll-margin-top: var(--space-6);
 }
 
 arnes-shell .chat-turn:last-child {
@@ -189,7 +190,7 @@ arnes-shell .arnes-message[data-role='user'] {
 }
 
 arnes-shell arnes-composer {
-  padding: 0 var(--space-2) var(--space-2);
+  padding: 0 var(--space-2) max(var(--space-2), env(safe-area-inset-bottom));
 }
 
 arnes-shell .composer {

@@ -43,7 +43,7 @@ class ContextMeter extends HTMLElement {
     if (!limit) return
 
     const tokens = usage?.model === model ? usage.tokens : undefined
-    const format = new Intl.NumberFormat(i18n.locale)
+    const format = new Intl.NumberFormat(i18n.locale, { notation: 'compact' })
 
     this.meter.setAttribute('aria-valuemax', String(limit))
     if (tokens === undefined) this.meter.removeAttribute('aria-valuenow')
