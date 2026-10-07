@@ -13,6 +13,9 @@ class ArnesMessages extends HTMLElement {
   private latestTurn: HTMLElement | undefined
   private resizeObserver: ResizeObserver | undefined
   private scrollFrame: number | undefined
+  private scrollRetries = 0
+  private debugElement: HTMLPreElement | undefined
+  private debugCounters = { scheduled: 0, scrolled: 0, retried: 0 }
 
   /** Keeps the conversation landmark inside this component across reconnections. */
   connectedCallback(): void {
@@ -30,6 +33,30 @@ class ArnesMessages extends HTMLElement {
   disconnectedCallback(): void {
     this.resizeObserver?.disconnect()
     if (this.scrollFrame !== undefined) cancelAnimationFrame(this.scrollFrame)
+    this.debugElement?.remove()
+  }
+
+  /** TEMPORARY on-screen diagnostics for the mobile push-to-top investigation; remove once resolved. */
+  private debug(tag: string, extra: Record<string, unknown> = {}): void {
+    if (!this.debugElement) {
+      this.debugElement = document.createElement('pre')
+      this.debugElement.style.cssText = 'position:fixed;top:0;left:0;z-index:9999;pointer-events:none;margin:0;padding:4px;font:10px/1.3 monospace;background:#000c;color:#0f0;white-space:pre;max-width:100vw'
+      document.body.append(this.debugElement)
+    }
+
+    const viewport = window.visualViewport
+    this.debugElement.textContent = JSON.stringify({
+      tag,
+      ...this.debugCounters,
+      scrollTop: Math.round(this.container.scrollTop),
+      scrollHeight: this.container.scrollHeight,
+      clientHeight: this.container.clientHeight,
+      turnH: this.container.style.getPropertyValue('--chat-turn-height'),
+      vv: viewport ? [Math.round(viewport.height), Math.round(viewport.offsetTop), viewport.scale] : null,
+      inner: innerHeight,
+      randomUUID: typeof crypto.randomUUID,
+      ...extra,
+    })
   }
 
   /** Keeps the latest turn at least as tall as the visible conversation, excluding its padding. */
@@ -65,11 +92,14 @@ class ArnesMessages extends HTMLElement {
     if (!this.latestTurn || !this.isConnected) return
 
     this.resizeTurns()
+    this.scrollRetries = 0
+    this.debugCounters.scrolled += 1
     this.latestTurn.scrollIntoView({ block: 'start', behavior: 'instant' })
+    this.debug('scroll')
     this.scrollFrame = requestAnimationFrame(this.retryLatestTurnScroll)
   }
 
-  /** Reapplies the alignment once when a mobile browser drops the first programmatic scroll of a turn. */
+  /** Reapplies the alignment for a short window while a mobile browser undoes the first attempts. */
   private retryLatestTurnScroll = (): void => {
     this.scrollFrame = undefined
     if (!this.latestTurn || !this.isConnected) return
@@ -77,7 +107,18 @@ class ArnesMessages extends HTMLElement {
     const padding = parseFloat(getComputedStyle(this.container).paddingTop)
     const offset = this.latestTurn.getBoundingClientRect().top - this.container.getBoundingClientRect().top
 
-    if (Math.abs(offset - padding) >= 1) this.latestTurn.scrollIntoView({ block: 'start', behavior: 'instant' })
+    if (Math.abs(offset - padding) < 1) {
+      this.debug('retry-aligned')
+      return
+    }
+
+    this.debug('retry', { off: Math.round(offset - padding), retries: this.scrollRetries })
+    if (this.scrollRetries >= 10) return
+
+    this.scrollRetries += 1
+    this.debugCounters.retried = this.scrollRetries
+    this.latestTurn.scrollIntoView({ block: 'start', behavior: 'instant' })
+    this.scrollFrame = requestAnimationFrame(this.retryLatestTurnScroll)
   }
 
   /** Preserves the loading node so token updates do not restart its animation. */
@@ -96,61 +137,69 @@ class ArnesMessages extends HTMLElement {
 
   /** Keeps loading visible through intermediate text until the response completes or fails. */
   set state(state: Pick<ChatState, 'messages' | 'streaming' | 'error'>) {
-    this.container.setAttribute('aria-busy', String(state.streaming))
+    try {
+      this.container.setAttribute('aria-busy', String(state.streaming))
 
-    while (this.elements.length > state.messages.length) {
-      const element = this.elements.pop()!
-      const turn = element.parentElement!
-      element.remove()
-      if (!turn.childElementCount) turn.remove()
-    }
-
-    if (!state.messages.length) {
-      this.container.append(this.welcome)
-      this.latestTurn = undefined
-      if (this.scrollFrame !== undefined) cancelAnimationFrame(this.scrollFrame)
-      this.scrollFrame = undefined
-      return
-    }
-
-    this.welcome.remove()
-
-    for (const [index, message] of state.messages.entries()) {
-      let element = this.elements[index]
-
-      if (!element) {
-        element = this.appendMessage(message.role)
+      while (this.elements.length > state.messages.length) {
+        const element = this.elements.pop()!
+        const turn = element.parentElement!
+        element.remove()
+        if (!turn.childElementCount) turn.remove()
       }
 
-      element.dataset.role = message.role
-      if (message.role === 'error') {
-        element.setAttribute('role', 'alert')
-        element.removeAttribute('aria-label')
-      } else {
-        element.removeAttribute('role')
-        element.setAttribute('aria-label', message.role === 'user' ? i18n._("You") : i18n._("Assistant"))
+      if (!state.messages.length) {
+        this.container.append(this.welcome)
+        this.latestTurn = undefined
+        if (this.scrollFrame !== undefined) cancelAnimationFrame(this.scrollFrame)
+        this.scrollFrame = undefined
+        return
       }
 
-      const waiting = state.streaming && !state.error && message.role === 'assistant'
-        && index === state.messages.length - 1
-      const text = message.text
+      this.welcome.remove()
 
-      const contentKey = `${message.role}\0${waiting}\0${text}`
+      for (const [index, message] of state.messages.entries()) {
+        let element = this.elements[index]
 
-      if (this.rendered.get(element) === contentKey) continue
+        if (!element) {
+          element = this.appendMessage(message.role)
+        }
 
-      if (message.role === 'assistant') this.renderAssistant(element, text, waiting)
-      else element.textContent = text
+        element.dataset.role = message.role
+        if (message.role === 'error') {
+          element.setAttribute('role', 'alert')
+          element.removeAttribute('aria-label')
+        } else {
+          element.removeAttribute('role')
+          element.setAttribute('aria-label', message.role === 'user' ? i18n._("You") : i18n._("Assistant"))
+        }
 
-      this.rendered.set(element, contentKey)
-    }
+        const waiting = state.streaming && !state.error && message.role === 'assistant'
+          && index === state.messages.length - 1
+        const text = message.text
 
-    const latestTurn = this.container.lastElementChild as HTMLElement | null
+        const contentKey = `${message.role}\0${waiting}\0${text}`
 
-    if (latestTurn !== (this.latestTurn ?? null)) {
-      this.latestTurn = latestTurn ?? undefined
-      if (this.scrollFrame !== undefined) cancelAnimationFrame(this.scrollFrame)
-      this.scrollFrame = requestAnimationFrame(this.scrollToLatestTurn)
+        if (this.rendered.get(element) === contentKey) continue
+
+        if (message.role === 'assistant') this.renderAssistant(element, text, waiting)
+        else element.textContent = text
+
+        this.rendered.set(element, contentKey)
+      }
+
+      const latestTurn = this.container.lastElementChild as HTMLElement | null
+
+      if (latestTurn !== (this.latestTurn ?? null)) {
+        this.latestTurn = latestTurn ?? undefined
+        if (this.scrollFrame !== undefined) cancelAnimationFrame(this.scrollFrame)
+        this.debugCounters.scheduled += 1
+        this.scrollFrame = requestAnimationFrame(this.scrollToLatestTurn)
+      }
+
+      this.debug('state', { messages: state.messages.length })
+    } catch (error) {
+      this.debug('error', { error: String(error) })
+      throw error
     }
   }
 }

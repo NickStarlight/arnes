@@ -48,7 +48,6 @@ class ArnesComposer extends HTMLElement {
   private streaming = false
   private canStop = false
   private loading = true
-  private restoreFocus = false
   private usage: ContextUsage | undefined
   private cost = 0
   private canCompact = false
@@ -169,22 +168,7 @@ class ArnesComposer extends HTMLElement {
     button.title = label
     button.querySelector('span')!.textContent = label
     button.querySelector('use')!.setAttribute('href', this.canStop ? `#stop-icon` : `#arrow-right-icon`)
-    this.restoreMessageFocus()
     this.renderContext()
-  }
-
-  /** Restores focus after a submitted response finishes without scrolling or taking focus from another control. */
-  private restoreMessageFocus(): void {
-    const input = this.querySelector('textarea')
-    if (!this.restoreFocus || !input || input.disabled || !this.isConnected) return
-
-    this.restoreFocus = false
-    const active = document.activeElement
-    const button = this.querySelector('.composer-send')
-
-    if (active === document.body || active === input || active === button) {
-      input.focus({ preventScroll: true })
-    }
   }
 
   /** Cancels through a separate event so required form fields cannot block Stop. */
@@ -341,7 +325,7 @@ class ArnesComposer extends HTMLElement {
 
     input.value = ''
     this.resizeMessageInput()
-    this.restoreFocus = true
+    input.blur()
 
     this.dispatchEvent(new CustomEvent<ArnesSubmission>('arnes-submit', {
       bubbles: true,
