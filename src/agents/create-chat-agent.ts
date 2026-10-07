@@ -1,4 +1,5 @@
 import { createAgent } from '@/agents/agent.ts'
+import { createTools, type ToolConfig } from '@/agents/tools/create-tools.ts'
 import { modelFactories } from '@/agents/model-factories.ts'
 import { DexieSaver } from '@/libs/dexie/checkpointer.ts'
 import { getProviderKey, getAssistantSetting } from '@/stores/settings.ts'
@@ -8,9 +9,10 @@ const checkpointer = new DexieSaver()
 /** Composes the chat agent from current saved settings without making a model request. */
 export async function createChatAgent(provider: string, model: string) {
   const chatModel = await createChatModel(provider, model)
+  const tools = createTools(await loadToolConfig())
   const systemPrompt = await loadSystemPrompt()
 
-  return createAgent(chatModel, model, [], systemPrompt, checkpointer)
+  return createAgent(chatModel, model, tools, systemPrompt, checkpointer)
 }
 
 /** Resolves the selected provider and reads its key at creation time so settings stay current. */
@@ -20,6 +22,13 @@ export async function createChatModel(provider: string, model: string) {
   const apiKey = await getProviderKey(provider)
 
   return modelFactories[provider](model, apiKey)
+}
+
+/** Reads saved credentials into named integration configuration for core tool composition. */
+async function loadToolConfig(): Promise<ToolConfig> {
+  const apiKey = await getProviderKey('tavily')
+
+  return apiKey ? { tavily: { apiKey } } : {}
 }
 
 /** Combines saved assistant instructions and memory without modifying either stored value. */

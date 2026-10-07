@@ -40,6 +40,15 @@ const providers: Record<string, Provider> = {
     website: 'https://openai.com/',
     privacy: 'https://openai.com/policies/privacy-policy/',
   },
+  'tavily': {
+    label: "Tavily",
+    description: i18n._("A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."),
+    logo: 'tavily',
+    width: 96,
+    height: 29,
+    website: 'https://tavily.com/',
+    privacy: 'https://tavily.com/privacy',
+  },
 }
 
 let nextId = 0

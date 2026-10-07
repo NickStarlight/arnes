@@ -26,6 +26,10 @@ class HomeContent extends HTMLElement {
           <h2 id="home-data">${i18n._('Data Control')}</h2>
           <p>${i18n._('Your conversations, settings, and API keys are stored on your device. No cloud sync. Requests go directly to your chosen providers, whose data policies apply.')}</p>
         </section>
+        <section aria-labelledby="home-search">
+          <h2 id="home-search">${i18n._('Search engines')}</h2>
+          <p>${i18n._('Connect search engines that allow browser requests through CORS. Give your assistant access to the web with your own API keys.')}</p>
+        </section>
         <section aria-labelledby="home-pwa">
           <h2 id="home-pwa">${i18n._('On your computer. On your phone.')}</h2>
           <p>${i18n._('Open it in your browser or install it as a PWA. No app store or powerful hardware required. Your AI providers run the models.')}</p>

@@ -466,6 +466,32 @@ msgid "Providers"
 msgstr "Provedores"
 
 #. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:44
+msgid "A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."
+msgstr "Um mecanismo de busca e API de dados da web criado para aplicações de IA. Encontra fontes e trechos da web para embasar as respostas do seu assistente."
+
+#. js-lingui-explicit-id
+#: src/components/settings/search-engine-settings.ts:5
+#: src/components/home-content.ts:30
+msgid "Search engines"
+msgstr "Mecanismos de busca"
+
+#. js-lingui-explicit-id
+#: src/components/settings/search-engine-settings.ts:7
+msgid "Give your assistant access to the web. Connect a search engine with your own API key to find fresh information and sources."
+msgstr "Dê ao seu assistente acesso à web. Conecte um mecanismo de busca com sua própria chave de API para encontrar informações e fontes atualizadas."
+
+#. js-lingui-explicit-id
+#: src/components/settings/search-engine-settings.ts:8
+msgid "Learn more about search engine support"
+msgstr "Saiba mais sobre o suporte a mecanismos de busca"
+
+#. js-lingui-explicit-id
+#: src/components/home-content.ts:31
+msgid "Connect search engines that allow browser requests through CORS. Give your assistant access to the web with your own API keys."
+msgstr "Conecte mecanismos de busca que permitem solicitações do navegador via CORS. Dê ao seu assistente acesso à web com suas próprias chaves de API."
+
+#. js-lingui-explicit-id
 #: src/components/conversations/conversation-list.ts:10
 msgid "Loading conversations…"
 msgstr "Carregando conversas…"

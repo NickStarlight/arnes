@@ -6,6 +6,7 @@ import '@/components/conversations/conversation-list.ts'
 import '@/components/settings/general-settings.ts'
 import '@/components/settings/assistant-settings.ts'
 import '@/components/settings/providers-settings.ts'
+import '@/components/settings/search-engine-settings.ts'
 import '@/components/settings/data-control-settings.ts'
 import '@/components/settings/about-settings.ts'
 
@@ -67,6 +68,7 @@ const views: Record<string, View> = {
           ${settingsNavRow('settings-general', i18n._('General'))}
           ${settingsNavRow('settings-assistant', i18n._('Assistant'))}
           ${settingsNavRow('settings-providers', i18n._('Providers'))}
+          ${settingsNavRow('settings-search', i18n._('Search engines'))}
           ${settingsNavRow('settings-data', i18n._('Data Control'))}
           ${settingsNavRow('settings-about', i18n._('About'))}
         </ul>
@@ -76,6 +78,7 @@ const views: Record<string, View> = {
   'settings-general': settingsPage(i18n._('General'), '<general-settings></general-settings>'),
   'settings-assistant': settingsPage(i18n._('Assistant'), '<assistant-settings></assistant-settings>'),
   'settings-providers': settingsPage(i18n._('Providers'), '<providers-settings></providers-settings>'),
+  'settings-search': settingsPage(i18n._('Search engines'), '<search-engine-settings></search-engine-settings>'),
   'settings-data': settingsPage(i18n._('Data Control'), '<data-control-settings></data-control-settings>'),
   'settings-about': settingsPage(i18n._('About'), '<about-settings></about-settings>'),
 }
