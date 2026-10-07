@@ -11,7 +11,7 @@ import {
 const template = `<div class="conversation-heading">
   <h1>${i18n._('Conversations')}</h1>
   <button type="button" class="icon-control" data-action="delete-all" title="${i18n._("Delete all conversations")}" aria-label="${i18n._("Delete all conversations")}" disabled>
-    <svg aria-hidden="true" focusable="false"><use href="#delete-icon" /></svg>
+    <svg aria-hidden="true" focusable="false"><use href="#delete-all-icon" /></svg>
   </button>
 </div>
 <p role="status">${i18n._("Loading conversations…")}</p>

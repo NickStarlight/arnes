@@ -1241,6 +1241,12 @@ arnes-shell .composer .context-compact:hover:not(:disabled),
   margin: 0;
 }
 
+/* Matches the row action size so both trash glyphs share the same flush-right column. */
+.app-page .conversation-heading .icon-control {
+  width: var(--control-height-small);
+  height: var(--control-height-small);
+}
+
 .app-page .conversation-heading [data-action='delete-all']:hover:not(:disabled) {
   color: var(--color-danger);
 }

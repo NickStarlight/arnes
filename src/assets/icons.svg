@@ -4,7 +4,8 @@
     Source: https://github.com/carbon-design-system/carbon/tree/main/packages/icons
     SVG data: Carbon 11.89.0 via https://github.com/iconify/icon-sets/blob/master/json/carbon.json
     Adapted into symbols with application IDs and inherited currentColor.
-    rename = edit; delete = trash-can; chat = chat-launch; conversations = chat; loading = circle-dash.
+    rename = edit; delete = trash-can; chat = chat-launch; conversations = chat; loading = circle-dash;
+    delete-all = row--delete.
   -->
   <symbol id="checkmark-icon" viewBox="0 0 32 32" fill="currentColor">
     <polygon points="13 24 4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24" />
@@ -22,6 +23,11 @@
   <symbol id="delete-icon" viewBox="0 0 32 32" fill="currentColor">
     <path d="M12 12h2v12h-2zm6 0h2v12h-2z" />
     <path d="M4 6v2h2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h2V6Zm4 22V8h16v20Zm4-26h8v2h-8z" />
+  </symbol>
+  <symbol id="delete-all-icon" viewBox="0 0 32 32" fill="currentColor">
+    <path d="M24,30H4a2.0021,2.0021,0,0,1-2-2V22a2.0021,2.0021,0,0,1,2-2H24a2.0021,2.0021,0,0,1,2,2v6A2.0021,2.0021,0,0,1,24,30ZM4,22H3.9985L4,28H24V22Z" />
+    <polygon points="30 3.41 28.59 2 25 5.59 21.41 2 20 3.41 23.59 7 20 10.59 21.41 12 25 8.41 28.59 12 30 10.59 26.41 7 30 3.41" />
+    <path d="M4,14V8H18V6H4A2.0023,2.0023,0,0,0,2,8v6a2.0023,2.0023,0,0,0,2,2H26V14Z" />
   </symbol>
   <symbol id="stop-icon" viewBox="0 0 32 32" fill="currentColor">
     <rect x="8" y="8" width="16" height="16" />
