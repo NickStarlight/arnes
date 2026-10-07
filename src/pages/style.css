@@ -773,6 +773,11 @@ arnes-composer {
   white-space: pre-wrap;
 }
 
+.arnes-message[data-role='error'] {
+  color: var(--color-danger);
+  white-space: pre-wrap;
+}
+
 .arnes-message > :first-child {
   margin-block-start: 0;
 }

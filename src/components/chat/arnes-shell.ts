@@ -69,7 +69,6 @@ class ArnesShell extends HTMLElement {
     this.composer!.busy = state.streaming || Boolean(state.compacting) || this.loading || Boolean(this.loadError)
     this.composer!.compaction = { available: Boolean(state.threadId), active: Boolean(state.compacting) }
     this.composer!.generating = state.streaming
-    this.composer!.error = state.error
   }
 
   /** Cancels the previous run and waits for cleanup before selecting another conversation. */

@@ -5,6 +5,7 @@ import {
   deleteAllConversationRecords,
   deleteConversationRecords,
   getConversationCheckpoint,
+  getConversationMetadata,
   listConversationCheckpoints,
   listConversationMetadata,
   saveConversationMetadata,
@@ -50,7 +51,7 @@ function readMessages(value: unknown): ChatMessage[] {
   return messages
 }
 
-/** Derives titles from the first user message without storing a second copy of conversation data. */
+/** Derives list entries from visible transcripts, falling back to legacy agent checkpoints. */
 export async function listConversations(): Promise<ConversationSummary[]> {
   const conversations: ConversationSummary[] = []
   const metadata = new Map<string, ConversationMetadata>()
@@ -58,27 +59,39 @@ export async function listConversations(): Promise<ConversationSummary[]> {
   for (const entry of await listConversationMetadata()) metadata.set(entry.threadId, entry)
 
   for (const { threadId, checkpoint } of await listConversationCheckpoints()) {
-    const messages = readMessages(checkpoint.channel_values.messages)
+    const saved = metadata.get(threadId)
+    const messages = saved?.messages ?? readMessages(checkpoint.channel_values.messages)
+    metadata.delete(threadId)
     if (!messages.length) continue
 
-    let title = i18n._("Untitled conversation")
+    conversations.push(createSummary(threadId, messages, saved?.updatedAt ?? checkpoint.ts, saved))
+  }
 
-    for (const message of messages) {
-      if (message.role !== 'user') continue
+  for (const saved of metadata.values()) {
+    if (!saved.messages?.length || !saved.updatedAt) continue
 
-      title = message.text.replace(/\s+/g, ' ').trim()
-      if (title.length > 100) title = `${title.slice(0, 100)}…`
-      break
-    }
-
-    const saved = metadata.get(threadId)
-    conversations.push({ threadId, title: saved?.title ?? title, updatedAt: checkpoint.ts, pinned: saved?.pinned ?? false })
+    conversations.push(createSummary(saved.threadId, saved.messages, saved.updatedAt, saved))
   }
 
   return conversations.sort(
-    /** Stable sorting preserves newest-first order within pinned and unpinned groups. */
-    (left, right) => Number(right.pinned) - Number(left.pinned),
+    /** Keeps recently updated threads first within each pin group, including failures without checkpoints. */
+    (left, right) => Number(right.pinned) - Number(left.pinned) || right.updatedAt.localeCompare(left.updatedAt),
   )
+}
+
+/** Preserves custom titles and derives a compact fallback from the first user message. */
+function createSummary(threadId: string, messages: readonly ChatMessage[], updatedAt: string, saved?: ConversationMetadata): ConversationSummary {
+  let title = i18n._("Untitled conversation")
+
+  for (const message of messages) {
+    if (message.role !== 'user') continue
+
+    title = message.text.replace(/\s+/g, ' ').trim()
+    if (title.length > 100) title = `${title.slice(0, 100)}…`
+    break
+  }
+
+  return { threadId, title: saved?.title ?? title, updatedAt, pinned: saved?.pinned ?? false }
 }
 
 /** Rejects blank titles before persisting a user-supplied conversation name. */
@@ -106,6 +119,9 @@ export async function deleteAllConversations(): Promise<void> {
 
 /** Distinguishes a missing conversation from an empty saved history. */
 export async function loadConversation(threadId: string): Promise<{ messages: ChatMessage[], totalCost: number }> {
+  const saved = await getConversationMetadata(threadId)
+  if (saved?.messages) return { messages: [...saved.messages], totalCost: await getConversationCost(threadId) }
+
   const checkpoint = await getConversationCheckpoint(threadId)
   if (!checkpoint) throw new Error(i18n._("Conversation not found. Start a new chat or choose another conversation."))
 

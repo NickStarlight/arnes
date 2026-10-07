@@ -117,7 +117,13 @@ class ArnesMessages extends HTMLElement {
       }
 
       element.dataset.role = message.role
-      element.setAttribute('aria-label', message.role === 'user' ? i18n._("You") : i18n._("Assistant"))
+      if (message.role === 'error') {
+        element.setAttribute('role', 'alert')
+        element.removeAttribute('aria-label')
+      } else {
+        element.removeAttribute('role')
+        element.setAttribute('aria-label', message.role === 'user' ? i18n._("You") : i18n._("Assistant"))
+      }
 
       const waiting = state.streaming && !state.error && message.role === 'assistant'
         && index === state.messages.length - 1

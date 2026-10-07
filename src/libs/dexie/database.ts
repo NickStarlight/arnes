@@ -1,4 +1,5 @@
 import Dexie, { type Table } from 'dexie'
+import type { ChatMessage } from '@/stores/conversation.ts'
 
 type Serialized = [string, Uint8Array]
 
@@ -7,6 +8,8 @@ export type ConversationMetadata = {
   title?: string
   pinned?: boolean
   totalCost?: number
+  messages?: readonly ChatMessage[]
+  updatedAt?: string
 }
 
 export type CheckpointRecord = {

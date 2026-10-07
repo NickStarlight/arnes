@@ -4,6 +4,11 @@ import { DexieSaver } from '@/libs/dexie/checkpointer.ts'
 
 const saver = new DexieSaver()
 
+/** Reads the visible transcript and metadata without resuming the agent. */
+export async function getConversationMetadata(threadId: string): Promise<ConversationMetadata | undefined> {
+  return database.conversations.get(threadId)
+}
+
 /** Loads presentation metadata separately from agent checkpoints. */
 export async function listConversationMetadata(): Promise<ConversationMetadata[]> {
   return database.conversations.toArray()

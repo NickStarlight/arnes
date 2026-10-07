@@ -1,9 +1,10 @@
 import { i18n } from '@/i18n.ts'
 import type { ChatStreamEvent, ContextUsage } from '@/agents/context-usage.ts'
 import { addConversationCost } from '@/libs/dexie/conversation-cost.ts'
+import { saveConversationMetadata } from '@/libs/dexie/conversations.ts'
 
 export type ChatMessage = Readonly<{
-  role: 'user' | 'assistant'
+  role: 'user' | 'assistant' | 'error'
   text: string
   contextUsage?: ContextUsage
 }>
@@ -21,7 +22,7 @@ export type ChatState = Readonly<{
 type Listener = (state: ChatState) => void
 type TokenStream = (threadId: string, signal: AbortSignal) => AsyncIterable<ChatStreamEvent>
 
-/** Owns live conversation state while the agent's checkpointer handles durable storage. */
+/** Persists the visible transcript independently of the agent's resumable checkpoints. */
 export function createChatStore() {
   let state: ChatState = Object.freeze({ threadId: undefined, messages: Object.freeze([]), streaming: false, error: undefined })
   const listeners = new Set<Listener>()
@@ -73,6 +74,29 @@ export function createChatStore() {
     publish({ ...state, messages })
   }
 
+  /** Retains failures in the visible transcript without adding them to the agent's context. */
+  function appendError(text: string): void {
+    const messages = [...state.messages]
+    const last = messages[messages.length - 1]
+
+    if (state.streaming && last?.role === 'assistant' && !last.text.trim()) messages.pop()
+
+    messages.push(Object.freeze<ChatMessage>({ role: 'error', text }))
+    publish({ ...state, messages, error: text })
+  }
+
+  /** Saves completed turns, including errors, while keeping storage failures visible. */
+  async function saveMessages(): Promise<void> {
+    try {
+      await saveConversationMetadata(state.threadId!, {
+        messages: state.messages,
+        updatedAt: new Date().toISOString(),
+      })
+    } catch (error) {
+      appendError(error instanceof Error ? error.message : i18n._("Unable to complete the response."))
+    }
+  }
+
   /** Cancels the active run while retaining partial output and waiting for stream cleanup. */
   function stop(): void {
     controller?.abort()
@@ -105,6 +129,7 @@ export function createChatStore() {
     })
 
     try {
+      await saveConversationMetadata(threadId, { messages: state.messages, updatedAt: new Date().toISOString() })
       for await (const token of stream(threadId, activeController.signal)) {
         if (activeController.signal.aborted) break
         if (typeof token === 'string') appendToken(token)
@@ -112,15 +137,16 @@ export function createChatStore() {
       }
     } catch (error) {
       if (!activeController.signal.aborted) {
-        publish({ ...state, error: error instanceof Error ? error.message : i18n._("Unable to complete the response.") })
+        appendError(error instanceof Error ? error.message : i18n._("Unable to complete the response."))
       }
     } finally {
+      await saveMessages()
       controller = undefined
       publish({ ...state, streaming: false })
     }
   }
 
-  /** Serializes manual compaction with generation while keeping the visible transcript unchanged. */
+  /** Serializes manual compaction with generation and records failures in the visible transcript. */
   async function compact(run: (threadId: string, signal: AbortSignal) => Promise<ContextUsage>): Promise<void> {
     if (state.streaming || state.compacting || !state.threadId) return
     const activeController = new AbortController()
@@ -132,9 +158,10 @@ export function createChatStore() {
       await recordUsage(contextUsage)
     } catch (error) {
       if (!activeController.signal.aborted) {
-        publish({ ...state, error: error instanceof Error ? error.message : i18n._('Unable to compact this conversation.') })
+        appendError(error instanceof Error ? error.message : i18n._('Unable to compact this conversation.'))
       }
     } finally {
+      await saveMessages()
       controller = undefined
       publish({ ...state, compacting: false })
     }
