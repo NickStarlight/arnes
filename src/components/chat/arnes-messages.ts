@@ -13,6 +13,7 @@ class ArnesMessages extends HTMLElement {
   private latestTurn: HTMLElement | undefined
   private resizeObserver: ResizeObserver | undefined
   private scrollFrame: number | undefined
+  private scrollRetries = 0
 
   /** Keeps the conversation landmark inside this component across reconnections. */
   connectedCallback(): void {
@@ -65,11 +66,12 @@ class ArnesMessages extends HTMLElement {
     if (!this.latestTurn || !this.isConnected) return
 
     this.resizeTurns()
+    this.scrollRetries = 0
     this.latestTurn.scrollIntoView({ block: 'start', behavior: 'instant' })
     this.scrollFrame = requestAnimationFrame(this.retryLatestTurnScroll)
   }
 
-  /** Reapplies the alignment once when a mobile browser drops the first programmatic scroll of a turn. */
+  /** Reapplies the alignment while the soft keyboard and viewport settle, which can drop the first scroll. */
   private retryLatestTurnScroll = (): void => {
     this.scrollFrame = undefined
     if (!this.latestTurn || !this.isConnected) return
@@ -77,7 +79,11 @@ class ArnesMessages extends HTMLElement {
     const padding = parseFloat(getComputedStyle(this.container).paddingTop)
     const offset = this.latestTurn.getBoundingClientRect().top - this.container.getBoundingClientRect().top
 
-    if (Math.abs(offset - padding) >= 1) this.latestTurn.scrollIntoView({ block: 'start', behavior: 'instant' })
+    if (Math.abs(offset - padding) < 1 || this.scrollRetries >= 30) return
+
+    this.scrollRetries += 1
+    this.latestTurn.scrollIntoView({ block: 'start', behavior: 'instant' })
+    this.scrollFrame = requestAnimationFrame(this.retryLatestTurnScroll)
   }
 
   /** Preserves the loading node so token updates do not restart its animation. */
