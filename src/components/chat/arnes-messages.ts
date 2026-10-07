@@ -68,10 +68,19 @@ class ArnesMessages extends HTMLElement {
 
     const padding = parseFloat(getComputedStyle(this.container).paddingTop)
     const offset = this.latestTurn.getBoundingClientRect().top - this.container.getBoundingClientRect().top
-    this.container.scrollTo({
-      top: this.container.scrollTop + offset - padding,
-      behavior: 'instant',
-    })
+    this.container.scrollTop += offset - padding
+    this.scrollFrame = requestAnimationFrame(this.retryLatestTurnScroll)
+  }
+
+  /** Reapplies the alignment once when Firefox for Android drops the first programmatic scroll of a turn. */
+  private retryLatestTurnScroll = (): void => {
+    this.scrollFrame = undefined
+    if (!this.latestTurn || !this.isConnected) return
+
+    const padding = parseFloat(getComputedStyle(this.container).paddingTop)
+    const offset = this.latestTurn.getBoundingClientRect().top - this.container.getBoundingClientRect().top
+
+    if (Math.abs(offset - padding) >= 1) this.container.scrollTop += offset - padding
   }
 
   /** Preserves the loading node so token updates do not restart its animation. */
