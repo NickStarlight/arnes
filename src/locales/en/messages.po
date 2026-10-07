@@ -246,6 +246,14 @@ msgid "Conversations | arnes"
 msgstr "Conversations | arnes"
 
 #. js-lingui-explicit-id
+msgid "{domain} | arnes"
+msgstr "{domain} | arnes"
+
+#. js-lingui-explicit-id
+msgid "Breadcrumb"
+msgstr "Breadcrumb"
+
+#. js-lingui-explicit-id
 #: src/components/app-header.ts:14
 #: src/pages/localize.ts:9
 msgid "Settings"

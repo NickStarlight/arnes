@@ -1,15 +1,26 @@
 import { getView } from '@/pages/views.ts'
 import { observeViewport } from '@/pages/viewport.ts'
+import { getLastView, saveLastView } from '@/stores/settings.ts'
 
 class ArnesApp extends HTMLElement {
   private currentView = ''
   private stopObservingViewport: (() => void) | undefined
 
-  /** Starts at home and handles view selection entirely within the component. */
+  /** Starts on the view active before a reload and handles view selection entirely within the component. */
   connectedCallback(): void {
     this.addEventListener('click', this.navigate)
     this.stopObservingViewport ??= observeViewport(this)
-    if (!this.currentView) this.render('home')
+    if (!this.currentView) void this.restore()
+  }
+
+  /** Returns to the saved view when storage allows it, falling back to home on absence or failure. */
+  private async restore(): Promise<void> {
+    try {
+      const saved = await getLastView()
+      if (saved) this.render(saved.name, saved.threadId)
+    } finally {
+      if (!this.currentView) this.render('home')
+    }
   }
 
   /** Detaches navigation handling while the application is disconnected. */
@@ -34,16 +45,27 @@ class ArnesApp extends HTMLElement {
     const navigating = Boolean(this.currentView)
     this.currentView = name
     document.title = view.title
+    void saveLastView(threadId ? { name, threadId } : { name })
 
     const template = document.createElement('template')
     template.innerHTML = view.content
     if (threadId) template.content.querySelector('arnes-shell')?.setAttribute('thread-id', threadId)
-    this.replaceChildren(template.content)
 
-    if (navigating) {
-      const main = this.querySelector<HTMLElement>('main')
-      main?.setAttribute('tabindex', '-1')
-      main?.focus({ preventScroll: true })
+    /** Mounts the view and moves focus into it, running after the outgoing snapshot when transitioned. */
+    const swap = (): void => {
+      this.replaceChildren(template.content)
+
+      if (navigating) {
+        const main = this.querySelector<HTMLElement>('main')
+        main?.setAttribute('tabindex', '-1')
+        main?.focus({ preventScroll: true })
+      }
+    }
+
+    if (navigating && document.startViewTransition) {
+      document.startViewTransition(swap)
+    } else {
+      swap()
     }
   }
 }

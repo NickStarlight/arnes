@@ -91,6 +91,19 @@ a {
   color: var(--color-link);
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--motion-duration-expand);
+  animation-timing-function: var(--motion-easing);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 body {
   overflow: hidden;
   font-family: var(--font-family);
@@ -976,7 +989,7 @@ arnes-shell .composer button:not(.composer-settings-trigger, .context-trigger, .
   color: var(--color-accent);
 }
 
-.app-page :is(a, button, input, select, textarea, summary):focus-visible,
+.app-page :is(a, button, input, select, textarea):focus-visible,
 .app-header button:focus-visible,
 arnes-shell .composer :is(a, select, button):focus-visible,
 arnes-shell .composer-bar:has(textarea:focus-visible) {
@@ -992,26 +1005,63 @@ arnes-shell .composer :is(select, button):disabled {
   cursor: not-allowed;
 }
 
-.settings-page details {
-  border-bottom: var(--border);
+.settings-page .settings-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  list-style: none;
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
 }
 
-.settings-page summary {
+.settings-page .settings-breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.settings-page .settings-breadcrumb li + li::before {
+  content: '/';
+}
+
+.settings-page .settings-breadcrumb button {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  color: var(--color-muted);
+  font-size: inherit;
+}
+
+.settings-page .settings-breadcrumb button:hover:not(:disabled) {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.settings-page .settings-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.settings-page .settings-nav button {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  width: 100%;
   min-height: var(--control-height);
-  padding: var(--space-3) 0;
-  border-radius: var(--radius-control);
-  list-style: none;
-  cursor: pointer;
-}
-
-.settings-page summary::-webkit-details-marker {
-  display: none;
+  padding: var(--space-3);
+  border: 0;
+  border-bottom: var(--border);
+  border-radius: 0;
+  font-size: inherit;
+  text-align: start;
 }
 
 .settings-page .settings-chevron {
+  margin-inline-start: auto;
   color: var(--color-muted);
   transform: rotate(-90deg);
 }
@@ -1022,35 +1072,8 @@ a:hover,
 .composer-model-details a:hover,
 arnes-shell .composer .composer-settings-trigger:hover:not(:disabled),
 arnes-shell .composer .context-compact:hover:not(:disabled),
-.settings-page summary:hover,
-.settings-page summary:hover > .settings-chevron {
+.settings-page .settings-nav button:hover:not(:disabled) {
   color: var(--color-accent);
-}
-
-.settings-page details[open] > summary > .settings-chevron {
-  transform: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .settings-page .settings-chevron {
-    transition: transform var(--motion-duration-expand) var(--motion-easing);
-  }
-
-  /* Unsupported browsers retain native, instant disclosure behavior. */
-  @supports (interpolate-size: allow-keywords) and selector(details::details-content) {
-    .settings-page details::details-content {
-      interpolate-size: allow-keywords;
-      block-size: 0;
-      overflow: clip;
-      transition:
-        block-size var(--motion-duration-expand) var(--motion-easing),
-        content-visibility var(--motion-duration-expand) allow-discrete;
-    }
-
-    .settings-page details[open]::details-content {
-      block-size: auto;
-    }
-  }
 }
 
 .settings-page form,

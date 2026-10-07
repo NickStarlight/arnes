@@ -4,6 +4,7 @@ export type AssistantSetting = 'basePrompt' | 'memory'
 export type ChatPreference = 'model' | 'effort'
 export type LanguagePreference = '' | 'en' | 'pt-BR'
 export type ThemePreference = 'system' | 'light' | 'dark'
+export type LastView = Readonly<{ name: string, threadId?: string }>
 
 /** Preserves explicit legacy light selections and follows the system when unset. */
 export async function getThemePreference(): Promise<ThemePreference> {
@@ -57,4 +58,28 @@ export async function getChatPreference(field: ChatPreference): Promise<string> 
 /** Persists the selected model or effort before reporting success to the composer. */
 export async function saveChatPreference(field: ChatPreference, value: string): Promise<void> {
   await database.settings.put(value, `arnes:chat:${field}`)
+}
+
+/** Restores the view active before a reload, rejecting entries that are not a named view with an optional thread. */
+export async function getLastView(): Promise<LastView | undefined> {
+  const raw = await database.settings.get('arnes:app:view')
+  if (!raw) return undefined
+
+  try {
+    const parsed: unknown = JSON.parse(raw)
+    if (typeof parsed !== 'object' || parsed === null) return undefined
+
+    const { name, threadId } = parsed as Record<string, unknown>
+    if (typeof name !== 'string' || !name) return undefined
+    if (threadId !== undefined && typeof threadId !== 'string') return undefined
+
+    return threadId === undefined ? { name } : { name, threadId }
+  } catch {
+    return undefined
+  }
+}
+
+/** Remembers the active view so reloading returns to it instead of the landing page. */
+export async function saveLastView(view: LastView): Promise<void> {
+  await database.settings.put(JSON.stringify(view), 'arnes:app:view')
 }

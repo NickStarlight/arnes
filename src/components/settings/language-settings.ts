@@ -2,7 +2,7 @@ import { i18n } from '@/i18n.ts'
 import { getLanguagePreference, saveLanguagePreference } from '@/stores/settings.ts'
 
 const template = `<fieldset>
-    <legend><h3 id="language-heading">${i18n._('Language')}</h3></legend>
+    <legend><h2 id="language-heading">${i18n._('Language')}</h2></legend>
     <select id="language" name="language" aria-labelledby="language-heading" aria-describedby="language-status" disabled>
       <option value="">${i18n._('Use browser language')}</option>
       <option value="en">English</option>

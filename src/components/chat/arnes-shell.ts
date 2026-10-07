@@ -8,6 +8,7 @@ import { chatStore, type ChatState } from '@/stores/conversation.ts'
 import { streamChatResponse } from '@/agents/stream-response.ts'
 import { loadConversation } from '@/stores/conversation-history.ts'
 import { compactConversation } from '@/agents/compact-conversation.ts'
+import { saveLastView } from '@/stores/settings.ts'
 
 const template = `<app-header></app-header>
 <arnes-messages></arnes-messages>
@@ -21,6 +22,7 @@ class ArnesShell extends HTMLElement {
   private loading = false
   private loadError: string | undefined
   private historyStatus = document.createElement('p')
+  private savedThreadId: string | undefined
 
   /** Composes the application once and reconnects coordination without resetting its children. */
   connectedCallback(): void {
@@ -52,9 +54,14 @@ class ArnesShell extends HTMLElement {
     this.unsubscribe = undefined
   }
 
-  /** Pushes a single store snapshot down to both presentation components. */
+  /** Pushes a single store snapshot down to both presentation components and persists lazily allocated thread IDs. */
   private render = (state: ChatState): void => {
     this.streaming = state.streaming
+
+    if (state.threadId && state.threadId !== this.savedThreadId) {
+      this.savedThreadId = state.threadId
+      void saveLastView({ name: 'chat', threadId: state.threadId })
+    }
 
     this.messages!.state = state
     this.composer!.contextUsage = state.contextUsage

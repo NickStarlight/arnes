@@ -1,15 +1,9 @@
 import { i18n } from '@/i18n.ts'
 import { getAssistantSetting, saveAssistantSetting, type AssistantSetting } from '@/stores/settings.ts'
 
-const template = `<details aria-labelledby="assistant-heading">
-  <summary>
-    <svg class="settings-chevron" aria-hidden="true" focusable="false"><use href="#chevron-down-icon" /></svg>
-    <h2 id="assistant-heading">${i18n._("Assistant")}</h2>
-  </summary>
-
-  <form name="assistant-prompt" method="post" autocomplete="off" aria-labelledby="base-prompt-heading">
+const template = `<form name="assistant-prompt" method="post" autocomplete="off" aria-labelledby="base-prompt-heading">
     <fieldset>
-      <legend><h3 id="base-prompt-heading">${i18n._("Base prompt")}</h3></legend>
+      <legend><h2 id="base-prompt-heading">${i18n._("Base prompt")}</h2></legend>
       <p id="base-prompt-description">${i18n._("Set the instructions that guide the assistant's responses.")}</p>
       <p>
         <label for="base-prompt">${i18n._("Instructions")}</label>
@@ -24,7 +18,7 @@ const template = `<details aria-labelledby="assistant-heading">
 
   <form name="assistant-memory" method="post" autocomplete="off" aria-labelledby="memory-heading">
     <fieldset>
-      <legend><h3 id="memory-heading">${i18n._("Memory")}</h3></legend>
+      <legend><h2 id="memory-heading">${i18n._("Memory")}</h2></legend>
       <p id="memory-description">${i18n._("Review and edit what the assistant remembers across conversations.")}</p>
       <p>
         <label for="assistant-memory">${i18n._("Saved memory")}</label>
@@ -36,8 +30,7 @@ const template = `<details aria-labelledby="assistant-heading">
         <button name="clear" type="button" disabled>${i18n._("Clear memory")}</button>
       </div>
     </fieldset>
-  </form>
-</details>`
+  </form>`
 
 class AssistantSettings extends HTMLElement {
   private initialized = false

@@ -10,7 +10,7 @@ class ThemeSettings extends HTMLElement {
     if (this.initialized) return
     this.initialized = true
     this.innerHTML = `<fieldset>
-      <legend><h3 id="theme-heading">${i18n._('Theme')}</h3></legend>
+      <legend><h2 id="theme-heading">${i18n._('Theme')}</h2></legend>
       <select id="theme" name="theme" aria-labelledby="theme-heading" aria-describedby="theme-status" disabled>
         <option value="system">${i18n._('System')}</option>
         <option value="light">${i18n._('Light')}</option>

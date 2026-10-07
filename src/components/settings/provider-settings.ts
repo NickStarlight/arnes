@@ -49,7 +49,7 @@ function renderProvider(provider: Provider, id: string): string {
   return `
     <form method="post" autocomplete="off" aria-labelledby="${id}-heading">
       <fieldset>
-        <legend><h3 id="${id}-heading">${provider.label}</h3></legend>
+        <legend><h2 id="${id}-heading">${provider.label}</h2></legend>
         <provider-logo name="${provider.logo}" aria-label="${provider.label}" width="${provider.width}" height="${provider.height}"></provider-logo>
         <p>${provider.description}</p>
         <p>
