@@ -34,6 +34,7 @@ const thinkingMachines: ModelBrand = {
 }
 const minimax: ModelBrand = { label: 'MiniMax', logo: 'minimax', width: 40, height: 40 }
 const qwen: ModelBrand = { label: 'Qwen', logo: 'qwen', width: 40, height: 40 }
+const prismMl: ModelBrand = { label: 'Prism ML', logo: 'prism-ml', width: 40, height: 40 }
 
 export const modelProviders: ModelProvider[] = [
   {
@@ -93,14 +94,39 @@ export const modelProviders: ModelProvider[] = [
         website: 'https://deepseek.com/en/news/',
       },
       {
+        id: 'zai-org/GLM-5.3', label: 'GLM 5.3', brand: zai,
+        description: i18n._('Z.ai’s flagship open GLM model for reasoning, coding, and agent workflows.'),
+        website: 'https://huggingface.co/zai-org/GLM-5.3',
+      },
+      {
         id: 'zai-org/GLM-5.3-Flash', label: 'GLM 5.3 Flash', brand: zai,
         description: i18n._('An open GLM model from Z.ai for reasoning and coding.'),
         website: 'https://huggingface.co/zai-org/GLM-5.3-Flash',
       },
       {
+        id: 'zai-org/GLM-5.2', label: 'GLM 5.2', brand: zai,
+        description: i18n._('A previous-generation open GLM model from Z.ai for reasoning and coding.'),
+        website: 'https://huggingface.co/zai-org/GLM-5.2',
+      },
+      {
+        id: 'deepseek-ai/DeepSeek-V4-Pro-0813', label: 'DeepSeek V4 Pro 0813', brand: deepseek,
+        description: i18n._('DeepSeek’s Pro-tier V4 model for demanding reasoning and coding work.'),
+        website: 'https://deepseek.com/en/news/',
+      },
+      {
         id: 'meta-models/Muse-Glimmer-30B', label: 'Muse Glimmer 30B', brand: meta,
         description: i18n._('Meta’s open 30-billion-parameter model, built for agent workflows.'),
         website: 'https://dev.meta.ai/models/muse-glimmer',
+      },
+      {
+        id: 'Qwen/Qwen3.8-2.4T-A95B', label: 'Qwen3.8 2.4T-A95B', brand: qwen,
+        description: i18n._('A large mixture-of-experts Qwen model with 95 billion active parameters.'),
+        website: 'https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B',
+      },
+      {
+        id: 'deepseek-ai/DeepSeek-V4-Flash-0731', label: 'DeepSeek V4 Flash 0731', brand: deepseek,
+        description: i18n._('A fast, low-cost DeepSeek V4 model for everyday tasks.'),
+        website: 'https://deepseek.com/en/news/',
       },
       {
         id: 'thinkingmachines/Inkling', label: 'Inkling FP4', brand: thinkingMachines,
@@ -113,9 +139,24 @@ export const modelProviders: ModelProvider[] = [
         website: 'https://www.minimax.io/blog/minimax-m3',
       },
       {
+        id: 'openai/gpt-oss-120b', label: 'GPT-OSS 120B', brand: openai,
+        description: i18n._('OpenAI’s open-weight 120-billion-parameter model for reasoning and tool use.'),
+        website: 'https://huggingface.co/openai/gpt-oss-120b',
+      },
+      {
         id: 'Qwen/Qwen3.5-9B', label: 'Qwen3.5 9B FP8', brand: qwen,
         description: i18n._('A compact 9-billion-parameter model from the Qwen3.5 family.'),
         website: 'https://huggingface.co/Qwen/Qwen3.5-9B',
+      },
+      {
+        id: 'meta-llama/Llama-3.3-70B-Instruct-Turbo', label: 'Llama 3.3 70B Instruct Turbo', brand: meta,
+        description: i18n._('Meta’s instruction-tuned 70-billion-parameter model, optimized for speed.'),
+        website: 'https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct',
+      },
+      {
+        id: 'prism-ml/Ternary-Bonsai-27B', label: 'Ternary Bonsai 27B', brand: prismMl,
+        description: i18n._('A free ternary-quantized 27-billion-parameter model from Prism ML.'),
+        website: 'https://huggingface.co/prism-ml/Ternary-Bonsai-27B',
       },
     ],
   },

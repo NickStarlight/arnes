@@ -645,12 +645,32 @@ msgid "A compact DeepSeek model focused on speed and efficiency."
 msgstr "A compact DeepSeek model focused on speed and efficiency."
 
 #. js-lingui-explicit-id
+msgid "Z.ai’s flagship open GLM model for reasoning, coding, and agent workflows."
+msgstr "Z.ai’s flagship open GLM model for reasoning, coding, and agent workflows."
+
+#. js-lingui-explicit-id
 msgid "An open GLM model from Z.ai for reasoning and coding."
 msgstr "An open GLM model from Z.ai for reasoning and coding."
 
 #. js-lingui-explicit-id
+msgid "A previous-generation open GLM model from Z.ai for reasoning and coding."
+msgstr "A previous-generation open GLM model from Z.ai for reasoning and coding."
+
+#. js-lingui-explicit-id
+msgid "DeepSeek’s Pro-tier V4 model for demanding reasoning and coding work."
+msgstr "DeepSeek’s Pro-tier V4 model for demanding reasoning and coding work."
+
+#. js-lingui-explicit-id
 msgid "Meta’s open 30-billion-parameter model, built for agent workflows."
 msgstr "Meta’s open 30-billion-parameter model, built for agent workflows."
+
+#. js-lingui-explicit-id
+msgid "A large mixture-of-experts Qwen model with 95 billion active parameters."
+msgstr "A large mixture-of-experts Qwen model with 95 billion active parameters."
+
+#. js-lingui-explicit-id
+msgid "A fast, low-cost DeepSeek V4 model for everyday tasks."
+msgstr "A fast, low-cost DeepSeek V4 model for everyday tasks."
 
 #. js-lingui-explicit-id
 msgid "An open model from Thinking Machines Lab for reasoning, coding, and tool use."
@@ -661,8 +681,20 @@ msgid "A MiniMax model built for coding, long-context tasks, and agent workflows
 msgstr "A MiniMax model built for coding, long-context tasks, and agent workflows."
 
 #. js-lingui-explicit-id
+msgid "OpenAI’s open-weight 120-billion-parameter model for reasoning and tool use."
+msgstr "OpenAI’s open-weight 120-billion-parameter model for reasoning and tool use."
+
+#. js-lingui-explicit-id
 msgid "A compact 9-billion-parameter model from the Qwen3.5 family."
 msgstr "A compact 9-billion-parameter model from the Qwen3.5 family."
+
+#. js-lingui-explicit-id
+msgid "Meta’s instruction-tuned 70-billion-parameter model, optimized for speed."
+msgstr "Meta’s instruction-tuned 70-billion-parameter model, optimized for speed."
+
+#. js-lingui-explicit-id
+msgid "A free ternary-quantized 27-billion-parameter model from Prism ML."
+msgstr "A free ternary-quantized 27-billion-parameter model from Prism ML."
 
 #. js-lingui-explicit-id
 msgid "Select a model to see its details."
