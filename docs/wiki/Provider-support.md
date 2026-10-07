@@ -17,7 +17,9 @@ Self-hosting still requires the provider to allow requests from your installatio
 | OpenAI | AI models |
 | Anthropic | AI models |
 | Together AI | AI models |
-| Fireworks | AI models |
+| Fireworks* | AI models |
 | Tavily | Web search and page reading |
+
+\* Fireworks' CORS configuration only allows the `Authorization` and `Content-Type` request headers. The SDK arnes uses for it would also send telemetry headers, which the preflight rejects, so arnes strips them from every Fireworks request.
 
 Add your API keys in **Settings → Providers**. Choose an AI model from the model picker.
