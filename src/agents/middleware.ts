@@ -2,9 +2,10 @@ import { modelRetryMiddleware, summarizationMiddleware, type AnyAgentMiddleware,
 import type { ChatAnthropic } from '@langchain/anthropic'
 import type { ChatOpenAI } from '@langchain/openai'
 import type { ChatTogetherAI } from '@langchain/together-ai'
+import type { ChatFireworks } from '@langchain/fireworks'
 import { getContextWindow } from '@/agents/model-context.ts'
 
-export type AgentModel = ChatAnthropic | ChatOpenAI | ChatTogetherAI
+export type AgentModel = ChatAnthropic | ChatOpenAI | ChatTogetherAI | ChatFireworks
 
 /** Compacts only when the estimated history reaches the selected model's verified context window. */
 export function createAgentMiddleware(model: AgentModel, modelId: string): AnyAgentMiddleware[] {

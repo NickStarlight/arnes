@@ -271,6 +271,7 @@ SOFTWARE.
 ========================================================================
 @langchain/anthropic@1.5.12 — LICENSE
 @langchain/core@1.2.14 — LICENSE
+@langchain/fireworks@0.2.17 — LICENSE
 @langchain/openai@1.6.2 — LICENSE
 @langchain/together-ai@0.2.17 — LICENSE
 langchain@1.5.15 — LICENSE

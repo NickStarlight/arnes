@@ -2,6 +2,7 @@
 // OpenAI: https://developers.openai.com/api/docs/models/{model-id}
 // Anthropic: https://platform.claude.com/docs/en/models/overview
 // Together: https://docs.together.ai/docs/serverless/models
+// Fireworks: https://app.fireworks.ai/models/fireworks/{model-id}
 const contextWindows: Readonly<Record<string, number>> = {
   'gpt-6-astra': 1050000,
   'gpt-6.1-sol': 1050000,
@@ -24,6 +25,18 @@ const contextWindows: Readonly<Record<string, number>> = {
   'Qwen/Qwen3.5-9B': 262144,
   'meta-llama/Llama-3.3-70B-Instruct-Turbo': 131072,
   'prism-ml/Ternary-Bonsai-27B': 131072,
+  'accounts/fireworks/models/ember-1': 1000000,
+  'accounts/fireworks/models/deepseek-v4p1-flash': 1000000,
+  'accounts/fireworks/models/glm-5p3': 1000000,
+  'accounts/fireworks/models/glm-5p3-flash': 1000000,
+  'accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b': 262144,
+  'accounts/fireworks/models/qwen3p8-max': 262144,
+  'accounts/fireworks/models/kimi-k3': 1000000,
+  'accounts/fireworks/models/glm-5p2': 1000000,
+  'accounts/fireworks/models/minimax-m3': 524288,
+  'accounts/fireworks/models/gpt-oss-120b': 131072,
+  'accounts/fireworks/models/nemotron-3-ultra-nvfp4': 262144,
+  'accounts/fireworks/models/inkling': 1000000,
 }
 
 /** Shares verified limits between the context meter and automatic compaction. */

@@ -40,6 +40,15 @@ const providers: Record<string, Provider> = {
     website: 'https://openai.com/',
     privacy: 'https://openai.com/policies/privacy-policy/',
   },
+  'fireworks-ai': {
+    label: "Fireworks AI",
+    description: i18n._("A serverless inference platform for open and frontier AI models."),
+    logo: 'fireworks',
+    width: 65,
+    height: 32,
+    website: 'https://fireworks.ai/',
+    privacy: 'https://fireworks.ai/privacy-policy',
+  },
   'tavily': {
     label: "Tavily",
     description: i18n._("A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."),

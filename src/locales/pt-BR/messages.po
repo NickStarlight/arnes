@@ -1,490 +1,173 @@
-
-#. js-lingui-explicit-id
-msgid "An AI harness in a single HTML file. Run it in your browser, on your computer or your phone."
-msgstr "Um ambiente para IA em um único arquivo HTML. Use no navegador, no computador ou no celular."
-
-#. js-lingui-explicit-id
-msgid "On your computer. On your phone."
-msgstr "No computador. No celular."
-
-#. js-lingui-explicit-id
-msgid "Open it in your browser or install it as a PWA. No app store or powerful hardware required. Your AI providers run the models."
-msgstr "Abra no navegador ou instale como PWA. Sem loja de aplicativos nem hardware potente. Seus provedores de IA executam os modelos."
-
-#. js-lingui-explicit-id
-msgid "Build it yourself. Take it anywhere."
-msgstr "Compile você mesmo. Leve para qualquer lugar."
-
-#. js-lingui-explicit-id
-msgid "Inspect the source and compile your own copy. The build bundles the app into one portable HTML file, with scripts, styles, fonts, and icons included."
-msgstr "Inspecione o código-fonte e compile sua própria cópia. A compilação reúne o aplicativo em um único arquivo HTML portátil, com scripts, estilos, fontes e ícones incluídos."
-
-#. js-lingui-explicit-id
-msgid "No server to run."
-msgstr "Sem servidor para manter."
-
-#. js-lingui-explicit-id
-msgid "Compile it yourself. Take the HTML file with you. Run it in your browser, on your computer or your phone. Hosting is optional."
-msgstr "Compile você mesmo. Leve o arquivo HTML com você. Use no navegador, no computador ou no celular. A hospedagem é opcional."
-
-#. js-lingui-explicit-id
-msgid "View build attestations"
-msgstr "Ver atestações de compilação"
-
-#. js-lingui-explicit-id
-msgid "Copy"
-msgstr "Copiar"
-
-#. js-lingui-explicit-id
-msgid "Copy response"
-msgstr "Copiar resposta"
-
-#. js-lingui-explicit-id
-msgid "Copied"
-msgstr "Copiado"
-
-#. js-lingui-explicit-id
-msgid "Unable to copy. Select the text and copy it manually."
-msgstr "Não foi possível copiar. Selecione o texto e copie manualmente."
-
-#. js-lingui-explicit-id
-msgid "Context"
-msgstr "Contexto"
-
-#. js-lingui-explicit-id
-msgid "Context window usage"
-msgstr "Uso da janela de contexto"
-
-#. js-lingui-explicit-id
-msgid "Token usage is available after the model reports it."
-msgstr "O uso de tokens fica disponível após ser informado pelo modelo."
-
-#. js-lingui-explicit-id
-msgid "Input and output tokens reported for the latest model request, including cached input. Draft text is not included."
-msgstr "Tokens de entrada e saída informados na última requisição ao modelo, incluindo entrada em cache. O rascunho não está incluído."
-
-#. js-lingui-explicit-id
-msgid "Unable to compact this conversation."
-msgstr "Não foi possível compactar esta conversa."
-
-#. js-lingui-explicit-id
-msgid "No conversation to compact."
-msgstr "Nenhuma conversa para compactar."
-
-#. js-lingui-explicit-id
-msgid "Context used"
-msgstr "Contexto usado"
-
-#. js-lingui-explicit-id
-msgid "Total estimated cost"
-msgstr "Custo total estimado"
-
-#. js-lingui-explicit-id
-msgid "Compacting…"
-msgstr "Compactando…"
-
-#. js-lingui-explicit-id
-msgid "Compact now"
-msgstr "Compactar agora"
-
-#. js-lingui-explicit-id
-msgid "Context compacted."
-msgstr "Contexto compactado."
-
-#. js-lingui-explicit-id
-msgid "Estimated context after compaction. Updated on the next model request."
-msgstr "Contexto estimado após a compactação. Atualizado na próxima requisição ao modelo."
-
-#. js-lingui-explicit-id
-msgid "Welcome"
-msgstr "Boas-vindas"
-
-#. js-lingui-explicit-id
-msgid "Ask a question, explore an idea, or start with whatever is on your mind."
-msgstr "Faça uma pergunta, explore uma ideia ou comece com o que estiver pensando."
-
-#. js-lingui-explicit-id
-msgid "Install arnes"
-msgstr "Instalar arnes"
-
-#. js-lingui-explicit-id
-msgid "Unable to open installation. Try installing from your browser menu."
-msgstr "Não foi possível abrir a instalação. Tente instalar pelo menu do navegador."
-
-#. js-lingui-explicit-id
-msgid "Made with Web Components. No UI frameworks."
-msgstr "Feito com Web Components. Sem frameworks de interface."
-
-#. js-lingui-explicit-id
-msgid "Still don’t trust it?"
-msgstr "Ainda não confia?"
-
-#. js-lingui-explicit-id
-msgid "That’s okay. It’s just HTML, JavaScript, and CSS."
-msgstr "Tudo bem. É só HTML, JavaScript e CSS."
-
-#. js-lingui-explicit-id
-msgid "Host it yourself"
-msgstr "Hospede você mesmo"
-
-#. js-lingui-explicit-id
-msgid "A fully client-side AI harness that runs in your browser."
-msgstr "Um ambiente para IA executado inteiramente no seu navegador."
-
-#. js-lingui-explicit-id
-msgid "arnes connects you directly to AI providers that allow browser requests through CORS. No backend, no proxy, no middleman."
-msgstr "O arnes conecta você diretamente a provedores de IA que permitem requisições do navegador via CORS. Sem backend, proxy ou intermediários."
-
-#. js-lingui-explicit-id
-msgid "Your conversations, settings, and API keys are stored on your device. No cloud sync. Requests go directly to your chosen providers, whose data policies apply."
-msgstr "Suas conversas, configurações e chaves de API ficam armazenadas no seu dispositivo. Sem sincronização na nuvem. As requisições vão diretamente aos provedores escolhidos, sujeitos às políticas de dados deles."
-
-#. js-lingui-explicit-id
-msgid "A browser-native PWA"
-msgstr "Um PWA feito para o navegador"
-
-#. js-lingui-explicit-id
-msgid "A progressive web app that runs in your browser and installs directly from it. No app stores required."
-msgstr "Um aplicativo web progressivo que roda no navegador e pode ser instalado diretamente por ele. Sem precisar de lojas de aplicativos."
-
-#. js-lingui-explicit-id
-msgid "Source available"
-msgstr "Código-fonte disponível"
-
-#. js-lingui-explicit-id
-msgid "Auditable source code. Public builds. No hidden application code. Inspect what runs in your browser."
-msgstr "Código-fonte auditável. Builds públicos. Nenhum código oculto na aplicação. Inspecione o que roda no seu navegador."
-
-#. js-lingui-explicit-id
-msgid "About"
-msgstr "Sobre"
-
-#. js-lingui-explicit-id
-msgid "Bring your own API keys to connect the AI providers that power your conversations."
-msgstr "Use suas próprias chaves de API para conectar os provedores de IA que dão vida às suas conversas."
-
-#. js-lingui-explicit-id
-msgid "Learn more about provider support"
-msgstr "Saiba mais sobre o suporte a provedores"
-
-#. js-lingui-explicit-id
-msgid "Your messages and content go directly to the selected provider, with no proxy, middleware, or logging in between."
-msgstr "Suas mensagens e seu conteúdo vão diretamente para o provedor selecionado, sem proxy, middleware ou registro de logs no caminho."
-
-#. js-lingui-explicit-id
-msgid "To learn how your data is used, consult each provider’s privacy policy."
-msgstr "Para saber como seus dados são usados, consulte a política de privacidade de cada provedor."
-
-#. js-lingui-explicit-id
-msgid "A private, fully client-side AI harness. Your keys. Your models. Your language."
-msgstr "Um ambiente privado para IA, inteiramente no seu navegador. Suas chaves. Seus modelos. Seu idioma."
-
-#. js-lingui-explicit-id
-msgid "Free and open-source software licenses"
-msgstr "Licenças de software livre e de código aberto"
-
-#. js-lingui-explicit-id
-msgid "Wipe all data from this device? This cannot be undone."
-msgstr "Apagar todos os dados deste dispositivo? Esta ação não pode ser desfeita."
-
-#. js-lingui-explicit-id
-msgid "Deleting…"
-msgstr "Apagando…"
-
-#. js-lingui-explicit-id
-msgid "Exporting…"
-msgstr "Exportando…"
-
-#. js-lingui-explicit-id
-msgid "Download started."
-msgstr "Download iniciado."
-
-#. js-lingui-explicit-id
-msgid "Unable to wipe data. Try again."
-msgstr "Não foi possível apagar os dados. Tente novamente."
-
-#. js-lingui-explicit-id
-msgid "Unable to export data. Try again."
-msgstr "Não foi possível exportar os dados. Tente novamente."
-
 msgid ""
 msgstr ""
-"Language: pt-BR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. js-lingui-explicit-id
-#: src/stores/conversation-history.ts:57
+#: src/components/settings/provider-settings.ts:45
+msgid "A serverless inference platform for open and frontier AI models."
+msgstr "Uma plataforma de inferência sem servidor para modelos de IA abertos e de ponta."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:172
+msgid "A Fireworks model built on Kimi K3 that produces shorter reasoning traces."
+msgstr "Um modelo da Fireworks construído sobre o Kimi K3 que produz rastros de raciocínio mais curtos."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:192
+msgid "A compact NVIDIA hybrid Mamba-Transformer model for low-latency reasoning."
+msgstr "Um modelo híbrido Mamba-Transformer compacto da NVIDIA para raciocínio com baixa latência."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:197
+msgid "A flagship Qwen model for demanding reasoning and coding work."
+msgstr "Um modelo carro-chefe da Qwen para raciocínio e programação exigentes."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:202
+msgid "Moonshot AI’s flagship model for long-horizon coding, knowledge work, and reasoning."
+msgstr "Modelo carro-chefe da Moonshot AI para programação de longo prazo, trabalho intelectual e raciocínio."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:222
+msgid "NVIDIA’s frontier-scale hybrid model for complex agents and high-accuracy reasoning."
+msgstr "Modelo híbrido de grande escala da NVIDIA para agentes complexos e raciocínio de alta precisão."
+
+#. js-lingui-explicit-id
+#: src/stores/conversation-history.ts:84
 msgid "Untitled conversation"
 msgstr "Conversa sem título"
 
 #. js-lingui-explicit-id
-#: src/stores/conversation-history.ts:80
+#: src/stores/conversation-history.ts:100
 msgid "Enter a conversation name."
 msgstr "Insira um nome para a conversa."
 
 #. js-lingui-explicit-id
-#: src/stores/conversation-history.ts:98
+#: src/stores/conversation-history.ts:126
 msgid "Conversation not found. Start a new chat or choose another conversation."
 msgstr "Conversa não encontrada. Inicie um novo chat ou escolha outra conversa."
 
 #. js-lingui-explicit-id
-#: src/stores/conversation.ts:81
+#: src/stores/conversation.ts:96
+#: src/stores/conversation.ts:140
 msgid "Unable to complete the response."
 msgstr "Não foi possível concluir a resposta."
 
 #. js-lingui-explicit-id
-#: src/pages/localize.ts:4
-msgid "Settings | arnes"
-msgstr "Configurações | arnes"
+#: src/stores/conversation.ts:161
+msgid "Unable to compact this conversation."
+msgstr "Não foi possível compactar esta conversa."
 
 #. js-lingui-explicit-id
-#: src/pages/localize.ts:5
-msgid "Conversations | arnes"
-msgstr "Conversas | arnes"
-
-#. js-lingui-explicit-id
-msgid "{domain} | arnes"
-msgstr "{domain} | arnes"
-
-#. js-lingui-explicit-id
-msgid "Breadcrumb"
-msgstr "Navegação estrutural"
-
-#. js-lingui-explicit-id
-#: src/components/app-header.ts:14
-#: src/pages/localize.ts:9
+#: src/components/app-header.ts:13
+#: src/components/app-header.ts:15
+#: src/components/chat/arnes-composer.ts:35
+#: src/pages/views.ts:17
+#: src/pages/views.ts:64
+#: src/pages/views.ts:65
+#: src/pages/views.ts:66
 msgid "Settings"
 msgstr "Configurações"
 
 #. js-lingui-explicit-id
-#: src/components/app-header.ts:10
-#: src/pages/localize.ts:10
-msgid "Conversations"
-msgstr "Conversas"
+#: src/pages/views.ts:18
+msgid "Breadcrumb"
+msgstr "Navegação estrutural"
 
 #. js-lingui-explicit-id
-#: src/components/app-header.ts:6
-msgid "Chat"
-msgstr "Chat"
+#: src/pages/views.ts:29
+msgid "{domain} | arnes"
+msgstr "{domain} | arnes"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-messages.ts:34
-#: src/components/settings/assistant-settings.ts:6
-msgid "Assistant"
-msgstr "Assistente"
+#: src/pages/views.ts:56
+msgid "Conversations | arnes"
+msgstr "Conversas | arnes"
 
 #. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:11
-msgid "Base prompt"
-msgstr "Prompt base"
+#: src/pages/views.ts:62
+msgid "Settings | arnes"
+msgstr "Configurações | arnes"
 
 #. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:12
-msgid "Set the instructions that guide the assistant's responses."
-msgstr "Defina as instruções que orientam as respostas do assistente."
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:14
-msgid "Instructions"
-msgstr "Instruções"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:19
-msgid "Save prompt"
-msgstr "Salvar prompt"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:26
-msgid "Memory"
-msgstr "Memória"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:27
-msgid "Review and edit what the assistant remembers across conversations."
-msgstr "Revise e edite o que o assistente lembra entre as conversas."
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:29
-msgid "Saved memory"
-msgstr "Memória salva"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:34
-msgid "Save memory"
-msgstr "Salvar memória"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:35
-msgid "Clear memory"
-msgstr "Limpar memória"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:65
-#: src/components/settings/general-settings.ts:35
-#: src/components/settings/provider-settings.ts:107
-msgid "Loading…"
-msgstr "Carregando…"
-
-#. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:76
-#: src/components/settings/assistant-settings.ts:72
-#: src/components/settings/general-settings.ts:42
-msgid "Unable to load settings. Reload to try again."
-msgstr "Não foi possível carregar as configurações. Recarregue a página para tentar novamente."
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:88
-#: src/components/settings/general-settings.ts:55
-#: src/components/settings/provider-settings.ts:130
-msgid "Saving…"
-msgstr "Salvando…"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:92
-msgid "Saved"
-msgstr "Salvo"
-
-#. js-lingui-explicit-id
-#: src/components/settings/assistant-settings.ts:94
-#: src/components/settings/general-settings.ts:61
-msgid "Unable to save settings. Try again."
-msgstr "Não foi possível salvar as configurações. Tente novamente."
-
-#. js-lingui-explicit-id
-#: src/components/settings/data-control-settings.ts:4
-msgid "Data Control"
-msgstr "Controle de dados"
-
-#. js-lingui-explicit-id
-#: src/components/settings/data-control-settings.ts:9
-#: src/components/settings/data-control-settings.ts:14
-msgid "Export my data"
-msgstr "Exportar meus dados"
-
-#. js-lingui-explicit-id
-#: src/components/settings/data-control-settings.ts:10
-msgid "Download a JSON file containing your saved conversations, checkpoints, memory, and settings."
-msgstr "Baixe um arquivo JSON com suas conversas salvas, pontos de controle, memória e configurações."
-
-#. js-lingui-explicit-id
-#: src/components/settings/data-control-settings.ts:11
-msgid "Includes your saved API keys in plain text. Keep this file private."
-msgstr "Inclui suas chaves de API salvas em texto simples. Mantenha este arquivo privado."
-
-#. js-lingui-explicit-id
-#: src/components/settings/data-control-settings.ts:21
-#: src/components/settings/data-control-settings.ts:25
-msgid "Wipe all data"
-msgstr "Apagar todos os dados"
-
-#. js-lingui-explicit-id
-#: src/components/settings/data-control-settings.ts:22
-msgid "Delete all saved conversations, checkpoints, API keys, memory, base prompt, model selection, and preferences from this device. This cannot be undone."
-msgstr "Exclua todas as conversas salvas, pontos de controle, chaves de API, memória, prompt base, seleção de modelo e preferências deste dispositivo. Esta ação não pode ser desfeita."
-
-#. js-lingui-explicit-id
-#: src/components/settings/general-settings.ts:5
+#: src/pages/views.ts:68
+#: src/pages/views.ts:78
 msgid "General"
 msgstr "Geral"
 
 #. js-lingui-explicit-id
-#: src/components/settings/general-settings.ts:7
-msgid "Language"
-msgstr "Idioma"
+#: src/components/chat/arnes-messages.ts:125
+#: src/pages/views.ts:69
+#: src/pages/views.ts:79
+msgid "Assistant"
+msgstr "Assistente"
 
 #. js-lingui-explicit-id
-#: src/components/settings/general-settings.ts:9
-msgid "Use browser language"
-msgstr "Usar idioma do navegador"
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:17
-msgid "A cloud platform for running, fine-tuning, and training AI models."
-msgstr "Uma plataforma na nuvem para executar, ajustar e treinar modelos de IA."
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:26
-msgid "Access Claude models through the Anthropic API."
-msgstr "Acesse os modelos Claude pela API da Anthropic."
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:35
-msgid "Access OpenAI models through the OpenAI API."
-msgstr "Acesse os modelos OpenAI pela API da OpenAI."
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:64
-msgid "Visit website"
-msgstr "Visitar site"
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:65
-msgid "Privacy policy"
-msgstr "Política de privacidade"
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:67
-msgid "{provider} is not affiliated with or an endorser of this project."
-msgstr "{provider} não tem afiliação com este projeto nem o endossa."
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:69
-msgid "API key"
-msgstr "Chave de API"
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:70
-msgid "Enter a non-empty API key"
-msgstr "Insira uma chave de API não vazia"
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:73
-msgid "Save key"
-msgstr "Salvar chave"
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:114
-msgid "Unable to load API key. Reload to try again."
-msgstr "Não foi possível carregar a chave de API. Recarregue a página para tentar novamente."
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:134
-msgid "API key saved."
-msgstr "Chave de API salva."
-
-#. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:136
-msgid "Unable to save API key. Try again."
-msgstr "Não foi possível salvar a chave de API. Tente novamente."
-
-#. js-lingui-explicit-id
-#: src/components/settings/providers-settings.ts:5
+#: src/components/home-content.ts:22
+#: src/pages/views.ts:70
+#: src/pages/views.ts:80
 msgid "Providers"
 msgstr "Provedores"
 
 #. js-lingui-explicit-id
-#: src/components/settings/provider-settings.ts:44
-msgid "A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."
-msgstr "Um mecanismo de busca e API de dados da web criado para aplicações de IA. Encontra fontes e trechos da web para embasar as respostas do seu assistente."
-
-#. js-lingui-explicit-id
-#: src/components/settings/search-engine-settings.ts:5
 #: src/components/home-content.ts:30
+#: src/pages/views.ts:71
+#: src/pages/views.ts:81
 msgid "Search engines"
 msgstr "Mecanismos de busca"
 
 #. js-lingui-explicit-id
-#: src/components/settings/search-engine-settings.ts:7
-msgid "Give your assistant access to the web. Connect a search engine with your own API key to find fresh information and sources."
-msgstr "Dê ao seu assistente acesso à web. Conecte um mecanismo de busca com sua própria chave de API para encontrar informações e fontes atualizadas."
+#: src/components/home-content.ts:26
+#: src/pages/views.ts:72
+#: src/pages/views.ts:82
+msgid "Data Control"
+msgstr "Controle de dados"
 
 #. js-lingui-explicit-id
-#: src/components/settings/search-engine-settings.ts:8
-msgid "Learn more about search engine support"
-msgstr "Saiba mais sobre o suporte a mecanismos de busca"
+#: src/pages/views.ts:73
+#: src/pages/views.ts:83
+msgid "About"
+msgstr "Sobre"
+
+#. js-lingui-explicit-id
+#: src/components/app-header.ts:5
+#: src/components/app-header.ts:7
+#: src/components/home-content.ts:13
+#: src/components/home-content.ts:15
+msgid "Chat"
+msgstr "Chat"
+
+#. js-lingui-explicit-id
+#: src/components/app-header.ts:9
+#: src/components/app-header.ts:11
+#: src/components/conversations/conversation-list.ts:12
+msgid "Conversations"
+msgstr "Conversas"
+
+#. js-lingui-explicit-id
+#: src/components/app-install.ts:13
+#: src/components/app-install.ts:15
+msgid "Install arnes"
+msgstr "Instalar arnes"
+
+#. js-lingui-explicit-id
+#: src/components/app-install.ts:46
+msgid "Unable to open installation. Try installing from your browser menu."
+msgstr "Não foi possível abrir a instalação. Tente instalar pelo menu do navegador."
+
+#. js-lingui-explicit-id
+#: src/components/home-content.ts:18
+msgid "An AI harness in a single HTML file. Run it in your browser, on your computer or your phone."
+msgstr "Um ambiente para IA em um único arquivo HTML. Use no navegador, no computador ou no celular."
+
+#. js-lingui-explicit-id
+#: src/components/home-content.ts:23
+msgid "arnes connects you directly to AI providers that allow browser requests through CORS. No backend, no proxy, no middleman."
+msgstr "O arnes conecta você diretamente a provedores de IA que permitem requisições do navegador via CORS. Sem backend, proxy ou intermediários."
+
+#. js-lingui-explicit-id
+#: src/components/home-content.ts:27
+msgid "Your conversations, settings, and API keys are stored on your device. No cloud sync. Requests go directly to your chosen providers, whose data policies apply."
+msgstr "Suas conversas, configurações e chaves de API ficam armazenadas no seu dispositivo. Sem sincronização na nuvem. As requisições vão diretamente aos provedores escolhidos, sujeitos às políticas de dados deles."
 
 #. js-lingui-explicit-id
 #: src/components/home-content.ts:31
@@ -492,320 +175,792 @@ msgid "Connect search engines that allow browser requests through CORS. Give you
 msgstr "Conecte mecanismos de busca que permitem solicitações do navegador via CORS. Dê ao seu assistente acesso à web com suas próprias chaves de API."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:10
-msgid "Loading conversations…"
-msgstr "Carregando conversas…"
+#: src/components/home-content.ts:34
+msgid "On your computer. On your phone."
+msgstr "No computador. No celular."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:11
-msgid "Saved conversations"
-msgstr "Conversas salvas"
+#: src/components/home-content.ts:35
+msgid "Open it in your browser or install it as a PWA. No app store or powerful hardware required. Your AI providers run the models."
+msgstr "Abra no navegador ou instale como PWA. Sem loja de aplicativos nem hardware potente. Seus provedores de IA executam os modelos."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:39
-msgid "Unpin"
-msgstr "Desafixar"
+#: src/components/home-content.ts:38
+msgid "Build it yourself. Take it anywhere."
+msgstr "Compile você mesmo. Leve para qualquer lugar."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:39
-msgid "Pin"
-msgstr "Fixar"
+#: src/components/home-content.ts:39
+msgid "Inspect the source and compile your own copy. The build bundles the app into one portable HTML file, with scripts, styles, fonts, and icons included."
+msgstr "Inspecione o código-fonte e compile sua própria cópia. A compilação reúne o aplicativo em um único arquivo HTML portátil, com scripts, estilos, fontes e ícones incluídos."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:39
-msgid "Rename"
-msgstr "Renomear"
+#: src/components/home-content.ts:40
+msgid "Made with Web Components. No UI frameworks."
+msgstr "Feito com Web Components. Sem frameworks de interface."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:39
-msgid "Delete"
-msgstr "Excluir"
+#: src/components/home-content.ts:41
+msgid "View build attestations"
+msgstr "Ver atestações de compilação"
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:40
-msgid "{action} {title}"
-msgstr "{action} {title}"
+#: src/components/home-content.ts:44
+msgid "No server to run."
+msgstr "Sem servidor para manter."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:51
-msgid "Conversation name"
-msgstr "Nome da conversa"
+#: src/components/home-content.ts:45
+msgid "Compile it yourself. Take the HTML file with you. Run it in your browser, on your computer or your phone. Hosting is optional."
+msgstr "Compile você mesmo. Leve o arquivo HTML com você. Use no navegador, no computador ou no celular. A hospedagem é opcional."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:57
-msgid "Delete “{title}”? This cannot be undone."
-msgstr "Excluir “{title}”? Esta ação não pode ser desfeita."
+#: src/components/home-content.ts:46
+msgid "Host it yourself"
+msgstr "Hospede você mesmo"
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:96
-msgid "Unable to update conversation. Try again."
-msgstr "Não foi possível atualizar a conversa. Tente novamente."
+#: src/components/settings/about-settings.ts:14
+msgid "A fully client-side AI harness that runs in your browser."
+msgstr "Um ambiente para IA executado inteiramente no seu navegador."
 
 #. js-lingui-explicit-id
-msgid "Delete all conversations"
-msgstr "Excluir todas as conversas"
+#: src/components/settings/about-settings.ts:16
+msgid "Free and open-source software licenses"
+msgstr "Licenças de software livre e de código aberto"
 
 #. js-lingui-explicit-id
-msgid "Delete all conversations? This cannot be undone."
-msgstr "Excluir todas as conversas? Esta ação não pode ser desfeita."
+#: src/components/settings/assistant-settings.ts:6
+msgid "Base prompt"
+msgstr "Prompt base"
 
 #. js-lingui-explicit-id
-msgid "Unable to delete conversations. Try again."
-msgstr "Não foi possível excluir as conversas. Tente novamente."
+#: src/components/settings/assistant-settings.ts:7
+msgid "Set the instructions that guide the assistant's responses."
+msgstr "Defina as instruções que orientam as respostas do assistente."
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:132
-msgid "No conversations yet."
-msgstr "Ainda não há conversas."
+#: src/components/settings/assistant-settings.ts:9
+msgid "Instructions"
+msgstr "Instruções"
 
 #. js-lingui-explicit-id
-#: src/components/conversations/conversation-list.ts:134
-msgid "Unable to load conversations. Reload to try again."
-msgstr "Não foi possível carregar as conversas. Recarregue a página para tentar novamente."
+#: src/components/settings/assistant-settings.ts:14
+msgid "Save prompt"
+msgstr "Salvar prompt"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:13
-msgid "User message"
-msgstr "Mensagem do usuário"
+#: src/components/settings/assistant-settings.ts:21
+msgid "Memory"
+msgstr "Memória"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:17
-msgid "Model"
-msgstr "Modelo"
+#: src/components/settings/assistant-settings.ts:22
+msgid "Review and edit what the assistant remembers across conversations."
+msgstr "Revise e edite o que o assistente lembra entre as conversas."
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:18
-msgid "Effort"
-msgstr "Esforço"
+#: src/components/settings/assistant-settings.ts:24
+msgid "Saved memory"
+msgstr "Memória salva"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:19
-msgid "Submit"
-msgstr "Enviar"
+#: src/components/settings/assistant-settings.ts:29
+msgid "Save memory"
+msgstr "Salvar memória"
 
 #. js-lingui-explicit-id
-msgid "Stop generation"
-msgstr "Parar geração"
+#: src/components/settings/assistant-settings.ts:30
+msgid "Clear memory"
+msgstr "Limpar memória"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:65
-msgid "Loading settings…"
-msgstr "Carregando configurações…"
+#: src/components/settings/assistant-settings.ts:59
+#: src/components/settings/provider-settings.ts:119
+msgid "Loading…"
+msgstr "Carregando…"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:85
-msgid "Select a model"
-msgstr "Selecione um modelo"
+#: src/components/chat/arnes-composer.ts:222
+#: src/components/settings/assistant-settings.ts:66
+#: src/components/settings/language-settings.ts:37
+#: src/components/settings/theme-settings.ts:32
+msgid "Unable to load settings. Reload to try again."
+msgstr "Não foi possível carregar as configurações. Recarregue a página para tentar novamente."
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:114
-msgid "Low"
-msgstr "Baixo"
+#: src/components/settings/assistant-settings.ts:82
+#: src/components/settings/provider-settings.ts:142
+msgid "Saving…"
+msgstr "Salvando…"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:115
-msgid "Medium"
-msgstr "Médio"
+#: src/components/settings/assistant-settings.ts:87
+#: src/components/settings/provider-settings.ts:147
+msgid "Saved"
+msgstr "Salvo"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:116
-msgid "High"
-msgstr "Alto"
+#: src/components/settings/assistant-settings.ts:90
+#: src/components/settings/language-settings.ts:55
+#: src/components/settings/theme-settings.ts:60
+msgid "Unable to save settings. Try again."
+msgstr "Não foi possível salvar as configurações. Tente novamente."
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-composer.ts:152
-msgid "Unable to save selection. Try again."
-msgstr "Não foi possível salvar a seleção. Tente novamente."
+#: src/components/settings/data-control-settings.ts:7
+#: src/components/settings/data-control-settings.ts:12
+msgid "Export my data"
+msgstr "Exportar meus dados"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-messages.ts:11
-msgid "Conversation"
-msgstr "Conversa"
+#: src/components/settings/data-control-settings.ts:8
+msgid "Download a JSON file containing your saved conversations, checkpoints, memory, and settings."
+msgstr "Baixe um arquivo JSON com suas conversas salvas, pontos de controle, memória e configurações."
 
 #. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:9
+msgid "Includes your saved API keys in plain text. Keep this file private."
+msgstr "Inclui suas chaves de API salvas em texto simples. Mantenha este arquivo privado."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:19
+#: src/components/settings/data-control-settings.ts:23
+msgid "Wipe all data"
+msgstr "Apagar todos os dados"
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:20
+msgid "Delete all saved conversations, checkpoints, API keys, memory, base prompt, model selection, and preferences from this device. This cannot be undone."
+msgstr "Exclua todas as conversas salvas, pontos de controle, chaves de API, memória, prompt base, seleção de modelo e preferências deste dispositivo. Esta ação não pode ser desfeita."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:50
+msgid "Wipe all data from this device? This cannot be undone."
+msgstr "Apagar todos os dados deste dispositivo? Esta ação não pode ser desfeita."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:53
+msgid "Deleting…"
+msgstr "Apagando…"
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:53
+msgid "Exporting…"
+msgstr "Exportando…"
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:61
+msgid "Download started."
+msgstr "Download iniciado."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:65
+msgid "Unable to wipe data. Try again."
+msgstr "Não foi possível apagar os dados. Tente novamente."
+
+#. js-lingui-explicit-id
+#: src/components/settings/data-control-settings.ts:66
+msgid "Unable to export data. Try again."
+msgstr "Não foi possível exportar os dados. Tente novamente."
+
+#. js-lingui-explicit-id
+#: src/components/settings/language-settings.ts:5
+msgid "Language"
+msgstr "Idioma"
+
+#. js-lingui-explicit-id
+#: src/components/settings/language-settings.ts:7
+msgid "Use browser language"
+msgstr "Usar idioma do navegador"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:18
+msgid "A cloud platform for running, fine-tuning, and training AI models."
+msgstr "Uma plataforma na nuvem para executar, ajustar e treinar modelos de IA."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:27
+msgid "Access Claude models through the Anthropic API."
+msgstr "Acesse os modelos Claude pela API da Anthropic."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:36
+msgid "Access OpenAI models through the OpenAI API."
+msgstr "Acesse os modelos OpenAI pela API da OpenAI."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:54
+msgid "A search engine and web data API built for AI applications. Finds web sources and excerpts to inform your assistant’s answers."
+msgstr "Um mecanismo de busca e API de dados da web criado para aplicações de IA. Encontra fontes e trechos da web para embasar as respostas do seu assistente."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-details.ts:18
+#: src/components/settings/provider-settings.ts:74
+msgid "Visit website"
+msgstr "Visitar site"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:75
+msgid "Privacy policy"
+msgstr "Política de privacidade"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:77
+msgid "{provider} is not affiliated with or an endorser of this project."
+msgstr "{provider} não tem afiliação com este projeto nem o endossa."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:79
+msgid "API key"
+msgstr "Chave de API"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:80
+msgid "Enter a non-empty API key"
+msgstr "Insira uma chave de API não vazia"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:84
+msgid "Save key"
+msgstr "Salvar chave"
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:126
+msgid "Unable to load API key. Reload to try again."
+msgstr "Não foi possível carregar a chave de API. Recarregue a página para tentar novamente."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:150
+msgid "Unable to save API key. Try again."
+msgstr "Não foi possível salvar a chave de API. Tente novamente."
+
+#. js-lingui-explicit-id
+#: src/components/settings/providers-settings.ts:5
+msgid "Bring your own API keys to connect the AI providers that power your conversations."
+msgstr "Use suas próprias chaves de API para conectar os provedores de IA que dão vida às suas conversas."
+
+#. js-lingui-explicit-id
+#: src/components/settings/providers-settings.ts:5
+msgid "Your messages and content go directly to the selected provider, with no proxy, middleware, or logging in between."
+msgstr "Suas mensagens e seu conteúdo vão diretamente para o provedor selecionado, sem proxy, middleware ou registro de logs no caminho."
+
+#. js-lingui-explicit-id
+#: src/components/settings/providers-settings.ts:6
+msgid "To learn how your data is used, consult each provider’s privacy policy."
+msgstr "Para saber como seus dados são usados, consulte a política de privacidade de cada provedor."
+
+#. js-lingui-explicit-id
+#: src/components/settings/providers-settings.ts:7
+msgid "Learn more about provider support"
+msgstr "Saiba mais sobre o suporte a provedores"
+
+#. js-lingui-explicit-id
+#: src/components/settings/search-engine-settings.ts:5
+msgid "Give your assistant access to the web. Connect a search engine with your own API key to find fresh information and sources."
+msgstr "Dê ao seu assistente acesso à web. Conecte um mecanismo de busca com sua própria chave de API para encontrar informações e fontes atualizadas."
+
+#. js-lingui-explicit-id
+#: src/components/settings/search-engine-settings.ts:6
+msgid "Learn more about search engine support"
+msgstr "Saiba mais sobre o suporte a mecanismos de busca"
+
+#. js-lingui-explicit-id
+#: src/components/settings/theme-settings.ts:13
 msgid "Theme"
 msgstr "Tema"
 
 #. js-lingui-explicit-id
+#: src/components/settings/theme-settings.ts:15
 msgid "System"
 msgstr "Sistema"
 
 #. js-lingui-explicit-id
+#: src/components/settings/theme-settings.ts:16
 msgid "Light"
 msgstr "Claro"
 
 #. js-lingui-explicit-id
+#: src/components/settings/theme-settings.ts:17
 msgid "Dark"
 msgstr "Escuro"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-messages.ts:34
-msgid "You"
-msgstr "Você"
+#: src/components/conversations/conversation-list.ts:13
+#: src/components/conversations/conversation-list.ts:13
+msgid "Delete all conversations"
+msgstr "Excluir todas as conversas"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-messages.ts:38
-msgid "Responding…"
-msgstr "Respondendo…"
+#: src/components/conversations/conversation-list.ts:17
+msgid "Loading conversations…"
+msgstr "Carregando conversas…"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-shell.ts:66
-msgid "Loading conversation…"
-msgstr "Carregando conversa…"
+#: src/components/conversations/conversation-list.ts:18
+msgid "Saved conversations"
+msgstr "Conversas salvas"
 
 #. js-lingui-explicit-id
-#: src/components/chat/arnes-shell.ts:75
-msgid "Unable to load conversation. Reload to try again."
-msgstr "Não foi possível carregar a conversa. Recarregue a página para tentar novamente."
+#: src/components/conversations/conversation-list.ts:53
+msgid "Unpin"
+msgstr "Desafixar"
 
 #. js-lingui-explicit-id
-msgid "Advanced reasoning for complex coding, research, and problem solving."
-msgstr "Raciocínio avançado para programação complexa, pesquisa e resolução de problemas."
+#: src/components/conversations/conversation-list.ts:53
+msgid "Pin"
+msgstr "Fixar"
 
 #. js-lingui-explicit-id
-msgid "Balances capability and cost for coding and everyday work."
-msgstr "Equilibra capacidade e custo para programação e tarefas do dia a dia."
+#: src/components/conversations/conversation-list.ts:53
+msgid "Rename"
+msgstr "Renomear"
 
 #. js-lingui-explicit-id
-msgid "A fast, economical model for everyday tasks and high-volume requests."
-msgstr "Um modelo rápido e econômico para tarefas do dia a dia e grandes volumes de solicitações."
+#: src/components/conversations/conversation-list.ts:53
+msgid "Delete"
+msgstr "Excluir"
 
 #. js-lingui-explicit-id
-msgid "Built for complex coding, knowledge work, and sustained problem solving."
-msgstr "Criado para programação complexa, trabalho intelectual e resolução prolongada de problemas."
+#: src/components/conversations/conversation-list.ts:54
+msgid "{action} {title}"
+msgstr "{action} {title}"
 
 #. js-lingui-explicit-id
-msgid "A capable Claude model for demanding coding and professional work."
-msgstr "Um modelo Claude capaz de lidar com programação exigente e trabalho profissional."
+#: src/components/conversations/conversation-list.ts:66
+msgid "Conversation name"
+msgstr "Nome da conversa"
 
 #. js-lingui-explicit-id
-msgid "A faster, lower-cost alternative to Opus for everyday work."
-msgstr "Uma alternativa ao Opus mais rápida e econômica para o trabalho diário."
+#: src/components/conversations/conversation-list.ts:72
+msgid "Delete “{title}”? This cannot be undone."
+msgstr "Excluir “{title}”? Esta ação não pode ser desfeita."
 
 #. js-lingui-explicit-id
-msgid "A small, fast Claude model for responsive chat and efficient coding."
-msgstr "Um modelo Claude pequeno e rápido para conversas ágeis e programação eficiente."
+#: src/components/conversations/conversation-list.ts:118
+msgid "Unable to update conversation. Try again."
+msgstr "Não foi possível atualizar a conversa. Tente novamente."
 
 #. js-lingui-explicit-id
-msgid "A compact DeepSeek model focused on speed and efficiency."
-msgstr "Um modelo compacto da DeepSeek com foco em velocidade e eficiência."
+#: src/components/conversations/conversation-list.ts:132
+msgid "Delete all conversations? This cannot be undone."
+msgstr "Excluir todas as conversas? Esta ação não pode ser desfeita."
 
 #. js-lingui-explicit-id
-msgid "Z.ai’s flagship open GLM model for reasoning, coding, and agent workflows."
-msgstr "Modelo GLM aberto e carro-chefe da Z.ai para raciocínio, programação e fluxos de trabalho com agentes."
+#: src/components/conversations/conversation-list.ts:143
+msgid "Unable to delete conversations. Try again."
+msgstr "Não foi possível excluir as conversas. Tente novamente."
 
 #. js-lingui-explicit-id
-msgid "An open GLM model from Z.ai for reasoning and coding."
-msgstr "Um modelo GLM aberto da Z.ai para raciocínio e programação."
-
-#. js-lingui-explicit-id
-msgid "A previous-generation open GLM model from Z.ai for reasoning and coding."
-msgstr "Um modelo GLM aberto de geração anterior da Z.ai para raciocínio e programação."
-
-#. js-lingui-explicit-id
-msgid "DeepSeek’s Pro-tier V4 model for demanding reasoning and coding work."
-msgstr "Modelo V4 de nível Pro da DeepSeek para raciocínio e programação exigentes."
-
-#. js-lingui-explicit-id
-msgid "Meta’s open 30-billion-parameter model, built for agent workflows."
-msgstr "Modelo aberto da Meta com 30 bilhões de parâmetros, criado para fluxos de trabalho com agentes."
-
-#. js-lingui-explicit-id
-msgid "A large mixture-of-experts Qwen model with 95 billion active parameters."
-msgstr "Um grande modelo Qwen de mistura de especialistas com 95 bilhões de parâmetros ativos."
-
-#. js-lingui-explicit-id
-msgid "A fast, low-cost DeepSeek V4 model for everyday tasks."
-msgstr "Um modelo DeepSeek V4 rápido e de baixo custo para tarefas do dia a dia."
-
-#. js-lingui-explicit-id
-msgid "An open model from Thinking Machines Lab for reasoning, coding, and tool use."
-msgstr "Um modelo aberto da Thinking Machines Lab para raciocínio, programação e uso de ferramentas."
-
-#. js-lingui-explicit-id
-msgid "A MiniMax model built for coding, long-context tasks, and agent workflows."
-msgstr "Um modelo MiniMax criado para programação, tarefas com contexto longo e fluxos de trabalho com agentes."
-
-#. js-lingui-explicit-id
-msgid "OpenAI’s open-weight 120-billion-parameter model for reasoning and tool use."
-msgstr "Modelo aberto da OpenAI com 120 bilhões de parâmetros para raciocínio e uso de ferramentas."
-
-#. js-lingui-explicit-id
-msgid "A compact 9-billion-parameter model from the Qwen3.5 family."
-msgstr "Um modelo compacto de 9 bilhões de parâmetros da família Qwen3.5."
-
-#. js-lingui-explicit-id
-msgid "Meta’s instruction-tuned 70-billion-parameter model, optimized for speed."
-msgstr "Modelo da Meta com 70 bilhões de parâmetros ajustado por instruções, otimizado para velocidade."
-
-#. js-lingui-explicit-id
-msgid "A free ternary-quantized 27-billion-parameter model from Prism ML."
-msgstr "Um modelo gratuito de 27 bilhões de parâmetros com quantização ternária da Prism ML."
-
-#. js-lingui-explicit-id
-msgid "Select a model to see its details."
-msgstr "Selecione um modelo para ver seus detalhes."
-
-#. js-lingui-explicit-id
-msgid "Text"
-msgstr "Texto"
-
-#. js-lingui-explicit-id
-msgid "Vision"
-msgstr "Visão"
-
-#. js-lingui-explicit-id
-msgid "Audio"
-msgstr "Áudio"
-
-#. js-lingui-explicit-id
-msgid "Tool use"
-msgstr "Uso de ferramentas"
-
-#. js-lingui-explicit-id
-msgid "Reasoning"
-msgstr "Raciocínio"
-
-#. js-lingui-explicit-id
-msgid "Model capabilities"
-msgstr "Capacidades do modelo"
-
-#. js-lingui-explicit-id
-msgid "Cost"
-msgstr "Custo"
-
-#. js-lingui-explicit-id
-msgid "USD per 1M text tokens · standard rates"
-msgstr "USD por 1 milhão de tokens de texto · tarifas padrão"
-
-#. js-lingui-explicit-id
-msgid "Input"
-msgstr "Entrada"
-
-#. js-lingui-explicit-id
-msgid "Output"
-msgstr "Saída"
-
-#. js-lingui-explicit-id
-msgid "Cached input"
-msgstr "Entrada em cache"
-
-#. js-lingui-explicit-id
-msgid "Higher rates apply to long contexts."
-msgstr "Tarifas maiores se aplicam a contextos longos."
-
-#. js-lingui-explicit-id
-msgid "Provider pricing"
-msgstr "Preços do provedor"
-
-#. js-lingui-explicit-id
-msgid "USD / 1M tokens"
-msgstr "USD / 1 milhão de tokens"
-
-#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:180
 msgid "Pinned"
 msgstr "Fixadas"
 
 #. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:180
 msgid "All conversations"
 msgstr "Todas as conversas"
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:189
+msgid "No conversations yet."
+msgstr "Ainda não há conversas."
+
+#. js-lingui-explicit-id
+#: src/components/conversations/conversation-list.ts:191
+msgid "Unable to load conversations. Reload to try again."
+msgstr "Não foi possível carregar as conversas. Recarregue a página para tentar novamente."
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:20
+msgid "User message"
+msgstr "Mensagem do usuário"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:23
+#: src/components/chat/arnes-composer.ts:25
+#: src/components/chat/arnes-composer.ts:166
+msgid "Submit"
+msgstr "Enviar"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:30
+#: src/components/chat/arnes-composer.ts:37
+#: src/components/chat/arnes-composer.ts:85
+msgid "Model"
+msgstr "Modelo"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:30
+#: src/components/chat/arnes-composer.ts:38
+#: src/components/chat/arnes-composer.ts:86
+msgid "Effort"
+msgstr "Esforço"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:42
+#: src/components/chat/context-menu.ts:14
+#: src/components/chat/context-meter.ts:52
+msgid "Context"
+msgstr "Contexto"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:166
+msgid "Stop generation"
+msgstr "Parar geração"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:211
+msgid "Loading settings…"
+msgstr "Carregando configurações…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:233
+msgid "Select a model"
+msgstr "Selecione um modelo"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:262
+msgid "Low"
+msgstr "Baixo"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:263
+msgid "Medium"
+msgstr "Médio"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:264
+msgid "High"
+msgstr "Alto"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-composer.ts:302
+msgid "Unable to save selection. Try again."
+msgstr "Não foi possível salvar a seleção. Tente novamente."
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:20
+msgid "Conversation"
+msgstr "Conversa"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:85
+msgid "Responding…"
+msgstr "Respondendo…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-messages.ts:125
+msgid "You"
+msgstr "Você"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-shell.ts:99
+msgid "Loading conversation…"
+msgstr "Carregando conversa…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/arnes-shell.ts:122
+msgid "Unable to load conversation. Reload to try again."
+msgstr "Não foi possível carregar a conversa. Recarregue a página para tentar novamente."
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:16
+msgid "Context used"
+msgstr "Contexto usado"
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:17
+#: src/components/chat/model-facts.ts:43
+msgid "Input"
+msgstr "Entrada"
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:18
+#: src/components/chat/model-facts.ts:44
+msgid "Output"
+msgstr "Saída"
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:19
+msgid "Total estimated cost"
+msgstr "Custo total estimado"
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:35
+msgid "Context compacted."
+msgstr "Contexto compactado."
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:66
+#: src/components/chat/context-menu.ts:67
+msgid "Compacting…"
+msgstr "Compactando…"
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-menu.ts:66
+msgid "Compact now"
+msgstr "Compactar agora"
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-meter.ts:55
+msgid "Token usage is available after the model reports it."
+msgstr "O uso de tokens fica disponível após ser informado pelo modelo."
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-meter.ts:56
+msgid "Estimated context after compaction. Updated on the next model request."
+msgstr "Contexto estimado após a compactação. Atualizado na próxima requisição ao modelo."
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-meter.ts:57
+msgid "Input and output tokens reported for the latest model request, including cached input. Draft text is not included."
+msgstr "Tokens de entrada e saída informados na última requisição ao modelo, incluindo entrada em cache. O rascunho não está incluído."
+
+#. js-lingui-explicit-id
+#: src/components/chat/context-meter.ts:58
+msgid "Context window usage"
+msgstr "Uso da janela de contexto"
+
+#. js-lingui-explicit-id
+#: src/components/chat/create-chat-welcome.ts:7
+msgid "Welcome"
+msgstr "Boas-vindas"
+
+#. js-lingui-explicit-id
+#: src/components/chat/create-chat-welcome.ts:8
+msgid "Ask a question, explore an idea, or start with whatever is on your mind."
+msgstr "Faça uma pergunta, explore uma ideia ou comece com o que estiver pensando."
+
+#. js-lingui-explicit-id
+#: src/components/chat/create-message-copy.ts:11
+#: src/components/chat/create-message-copy.ts:12
+msgid "Copy response"
+msgstr "Copiar resposta"
+
+#. js-lingui-explicit-id
+#: src/components/chat/create-message-copy.ts:37
+msgid "Copied"
+msgstr "Copiado"
+
+#. js-lingui-explicit-id
+#: src/components/chat/create-message-copy.ts:40
+msgid "Unable to copy. Select the text and copy it manually."
+msgstr "Não foi possível copiar. Selecione o texto e copie manualmente."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-details.ts:10
+msgid "Select a model to see its details."
+msgstr "Selecione um modelo para ver seus detalhes."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:7
+msgid "Text"
+msgstr "Texto"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:8
+msgid "Vision"
+msgstr "Visão"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:9
+msgid "Audio"
+msgstr "Áudio"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:10
+msgid "Tool use"
+msgstr "Uso de ferramentas"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:11
+msgid "Reasoning"
+msgstr "Raciocínio"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:15
+msgid "Model capabilities"
+msgstr "Capacidades do modelo"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:42
+msgid "Cost"
+msgstr "Custo"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:46
+msgid "Cached input"
+msgstr "Entrada em cache"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:51
+msgid "USD / 1M tokens"
+msgstr "USD / 1 milhão de tokens"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:52
+msgid "USD per 1M text tokens · standard rates"
+msgstr "USD por 1 milhão de tokens de texto · tarifas padrão"
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-facts.ts:57
+msgid "Higher rates apply to long contexts."
+msgstr "Tarifas maiores se aplicam a contextos longos."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:49
+msgid "Advanced reasoning for complex coding, research, and problem solving."
+msgstr "Raciocínio avançado para programação complexa, pesquisa e resolução de problemas."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:54
+msgid "Balances capability and cost for coding and everyday work."
+msgstr "Equilibra capacidade e custo para programação e tarefas do dia a dia."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:59
+msgid "A fast, economical model for everyday tasks and high-volume requests."
+msgstr "Um modelo rápido e econômico para tarefas do dia a dia e grandes volumes de solicitações."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:70
+msgid "Built for complex coding, knowledge work, and sustained problem solving."
+msgstr "Criado para programação complexa, trabalho intelectual e resolução prolongada de problemas."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:75
+msgid "A capable Claude model for demanding coding and professional work."
+msgstr "Um modelo Claude capaz de lidar com programação exigente e trabalho profissional."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:80
+msgid "A faster, lower-cost alternative to Opus for everyday work."
+msgstr "Uma alternativa ao Opus mais rápida e econômica para o trabalho diário."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:85
+msgid "A small, fast Claude model for responsive chat and efficient coding."
+msgstr "Um modelo Claude pequeno e rápido para conversas ágeis e programação eficiente."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:96
+#: src/components/chat/model-options.ts:177
+msgid "A compact DeepSeek model focused on speed and efficiency."
+msgstr "Um modelo compacto da DeepSeek com foco em velocidade e eficiência."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:101
+#: src/components/chat/model-options.ts:182
+msgid "Z.ai’s flagship open GLM model for reasoning, coding, and agent workflows."
+msgstr "Modelo GLM aberto e carro-chefe da Z.ai para raciocínio, programação e fluxos de trabalho com agentes."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:106
+#: src/components/chat/model-options.ts:187
+msgid "An open GLM model from Z.ai for reasoning and coding."
+msgstr "Um modelo GLM aberto da Z.ai para raciocínio e programação."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:111
+#: src/components/chat/model-options.ts:207
+msgid "A previous-generation open GLM model from Z.ai for reasoning and coding."
+msgstr "Um modelo GLM aberto de geração anterior da Z.ai para raciocínio e programação."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:116
+msgid "DeepSeek’s Pro-tier V4 model for demanding reasoning and coding work."
+msgstr "Modelo V4 de nível Pro da DeepSeek para raciocínio e programação exigentes."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:121
+msgid "Meta’s open 30-billion-parameter model, built for agent workflows."
+msgstr "Modelo aberto da Meta com 30 bilhões de parâmetros, criado para fluxos de trabalho com agentes."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:126
+msgid "A large mixture-of-experts Qwen model with 95 billion active parameters."
+msgstr "Um grande modelo Qwen de mistura de especialistas com 95 bilhões de parâmetros ativos."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:131
+msgid "A fast, low-cost DeepSeek V4 model for everyday tasks."
+msgstr "Um modelo DeepSeek V4 rápido e de baixo custo para tarefas do dia a dia."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:136
+#: src/components/chat/model-options.ts:227
+msgid "An open model from Thinking Machines Lab for reasoning, coding, and tool use."
+msgstr "Um modelo aberto da Thinking Machines Lab para raciocínio, programação e uso de ferramentas."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:141
+#: src/components/chat/model-options.ts:212
+msgid "A MiniMax model built for coding, long-context tasks, and agent workflows."
+msgstr "Um modelo MiniMax criado para programação, tarefas com contexto longo e fluxos de trabalho com agentes."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:146
+#: src/components/chat/model-options.ts:217
+msgid "OpenAI’s open-weight 120-billion-parameter model for reasoning and tool use."
+msgstr "Modelo aberto da OpenAI com 120 bilhões de parâmetros para raciocínio e uso de ferramentas."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:151
+msgid "A compact 9-billion-parameter model from the Qwen3.5 family."
+msgstr "Um modelo compacto de 9 bilhões de parâmetros da família Qwen3.5."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:156
+msgid "Meta’s instruction-tuned 70-billion-parameter model, optimized for speed."
+msgstr "Modelo da Meta com 70 bilhões de parâmetros ajustado por instruções, otimizado para velocidade."
+
+#. js-lingui-explicit-id
+#: src/components/chat/model-options.ts:161
+msgid "A free ternary-quantized 27-billion-parameter model from Prism ML."
+msgstr "Um modelo gratuito de 27 bilhões de parâmetros com quantização ternária da Prism ML."
+
+#. js-lingui-explicit-id
+#~ msgid "Copy"
+#~ msgstr "Copiar"
+
+#. js-lingui-explicit-id
+#~ msgid "No conversation to compact."
+#~ msgstr "Nenhuma conversa para compactar."
+
+#. js-lingui-explicit-id
+#~ msgid "Still don’t trust it?"
+#~ msgstr "Ainda não confia?"
+
+#. js-lingui-explicit-id
+#~ msgid "That’s okay. It’s just HTML, JavaScript, and CSS."
+#~ msgstr "Tudo bem. É só HTML, JavaScript e CSS."
+
+#. js-lingui-explicit-id
+#~ msgid "A browser-native PWA"
+#~ msgstr "Um PWA feito para o navegador"
+
+#. js-lingui-explicit-id
+#~ msgid "A progressive web app that runs in your browser and installs directly from it. No app stores required."
+#~ msgstr "Um aplicativo web progressivo que roda no navegador e pode ser instalado diretamente por ele. Sem precisar de lojas de aplicativos."
+
+#. js-lingui-explicit-id
+#~ msgid "Source available"
+#~ msgstr "Código-fonte disponível"
+
+#. js-lingui-explicit-id
+#~ msgid "Auditable source code. Public builds. No hidden application code. Inspect what runs in your browser."
+#~ msgstr "Código-fonte auditável. Builds públicos. Nenhum código oculto na aplicação. Inspecione o que roda no seu navegador."
+
+#. js-lingui-explicit-id
+#~ msgid "A private, fully client-side AI harness. Your keys. Your models. Your language."
+#~ msgstr "Um ambiente privado para IA, inteiramente no seu navegador. Suas chaves. Seus modelos. Seu idioma."
+
+#. js-lingui-explicit-id
+#: src/components/settings/provider-settings.ts:134
+#~ msgid "API key saved."
+#~ msgstr "Chave de API salva."
+
+#. js-lingui-explicit-id
+#~ msgid "Provider pricing"
+#~ msgstr "Preços do provedor"

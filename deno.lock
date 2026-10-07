@@ -1,16 +1,17 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:@langchain/anthropic@^1.5.12": "1.5.12_@langchain+core@1.2.14",
-    "npm:@langchain/langgraph-checkpoint@^1.1.5": "1.1.5_@langchain+core@1.2.14",
-    "npm:@langchain/openai@^1.6.2": "1.6.2_@langchain+core@1.2.14",
-    "npm:@langchain/together-ai@~0.2.17": "0.2.17_@langchain+core@1.2.14",
+    "npm:@langchain/anthropic@^1.5.12": "1.5.12_@langchain+core@1.2.16",
+    "npm:@langchain/fireworks@~0.2.17": "0.2.17_@langchain+core@1.2.16",
+    "npm:@langchain/langgraph-checkpoint@^1.1.5": "1.1.5_@langchain+core@1.2.16",
+    "npm:@langchain/openai@^1.6.2": "1.6.2_@langchain+core@1.2.16",
+    "npm:@langchain/together-ai@~0.2.17": "0.2.17_@langchain+core@1.2.16",
     "npm:@lingui/cli@^6.9.0": "6.9.0",
     "npm:@lingui/core@^6.9.0": "6.9.0_@babel+core@7.29.7",
     "npm:@lingui/vite-plugin@^6.9.0": "6.9.0_@babel+core@7.29.7_vite@8.3.2",
     "npm:dexie@^4.4.6": "4.4.6",
     "npm:dompurify@^3.4.16": "3.4.16",
-    "npm:langchain@^1.5.15": "1.5.15_@langchain+core@1.2.14",
+    "npm:langchain@^1.5.15": "1.5.15_@langchain+core@1.2.16",
     "npm:marked-footnote@^1.4.0": "1.4.0_marked@18.0.14",
     "npm:marked@^18.0.14": "18.0.14",
     "npm:modern-normalize@^3.0.1": "3.0.1",
@@ -204,7 +205,7 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
-    "@langchain/anthropic@1.5.12_@langchain+core@1.2.14": {
+    "@langchain/anthropic@1.5.12_@langchain+core@1.2.16": {
       "integrity": "sha512-tVvI94zAtG6isYxBzL7hlbxfbqjmvx/BqBWAov7v+bABKYz3fZHFI2Io1UI5UzU+h/5SuC1qXUV+JxnaqylJJw==",
       "dependencies": [
         "@anthropic-ai/sdk",
@@ -212,8 +213,8 @@
         "zod"
       ]
     },
-    "@langchain/core@1.2.14_openai@7.27.0": {
-      "integrity": "sha512-NP+FZMDO8kzVf79kiVHByveErVbTc1kUm0OvJuASxy5dt2xo/m7mi4O0npskU71A9h0vke3YUDYEciiAsXdCoA==",
+    "@langchain/core@1.2.16_openai@7.27.0": {
+      "integrity": "sha512-CdESZETgotCG/xz0G1wyNq8AH3Px3BN50FDfOqA4PjoqOWhBtMP2DJxkRzuSNcsr11Z1pf0JMF1puAPw4HPxSQ==",
       "dependencies": [
         "@cfworker/json-schema",
         "@standard-schema/spec",
@@ -224,13 +225,20 @@
         "zod"
       ]
     },
-    "@langchain/langgraph-checkpoint@1.1.5_@langchain+core@1.2.14": {
+    "@langchain/fireworks@0.2.17_@langchain+core@1.2.16": {
+      "integrity": "sha512-7R+2yhi/prSPnitIE4WIeup0JhdnyMHrN+B5FxgvD2/BLHj2mIBAygeO8fsaQz/jzFWIngwMVpnekkPsmXsWGw==",
+      "dependencies": [
+        "@langchain/core",
+        "@langchain/openai"
+      ]
+    },
+    "@langchain/langgraph-checkpoint@1.1.5_@langchain+core@1.2.16": {
       "integrity": "sha512-BwDwl5VeTOh6CVuiIPgsUgfK51vTJDMSbFcSCUfjJWsl8/DPdK/mbv+ejxJstkSk/BlSPMP4JfXWcN6jD2ea2Q==",
       "dependencies": [
         "@langchain/core"
       ]
     },
-    "@langchain/langgraph-sdk@1.12.1_@langchain+core@1.2.14": {
+    "@langchain/langgraph-sdk@1.12.1_@langchain+core@1.2.16": {
       "integrity": "sha512-V/XSE7auTpfS5p3ByggDM6bKvRLeEjImb7/H+ng9qHkwCrYCGrZpVcuve2lH9pHQVOQlEtnHUsRZKQTWumcdhw==",
       "dependencies": [
         "@langchain/core",
@@ -240,7 +248,7 @@
         "p-retry"
       ]
     },
-    "@langchain/langgraph@1.4.19_@langchain+core@1.2.14_zod@4.6.5": {
+    "@langchain/langgraph@1.4.19_@langchain+core@1.2.16_zod@4.6.5": {
       "integrity": "sha512-wfT1Nyfwnu/N56piXRXxX6SQQ48ju6rqkGOQPD3/9laSB91ht+pVnq97/3FKO+LybvXfXKiBkfxyIlumdBhIQQ==",
       "dependencies": [
         "@langchain/core",
@@ -251,7 +259,7 @@
         "zod"
       ]
     },
-    "@langchain/openai@1.6.2_@langchain+core@1.2.14": {
+    "@langchain/openai@1.6.2_@langchain+core@1.2.16": {
       "integrity": "sha512-KaXc3zjdM2/E24FdBlsk5NTT2Dyxh46vzCS2by78ehN6G5zdx+4OfVnPvyLl8r2tv2TqQCHpEhImVXgnAZaOvg==",
       "dependencies": [
         "@langchain/core",
@@ -263,7 +271,7 @@
     "@langchain/protocol@0.0.19": {
       "integrity": "sha512-9hKcRrH7cBX6gfutdfXPoft1OCchHe4FEpALoDJMl5Qu+n/YG5ynZmyu8+8cxORlPwHBoKTxggvXz+76M1yX1Q=="
     },
-    "@langchain/together-ai@0.2.17_@langchain+core@1.2.14": {
+    "@langchain/together-ai@0.2.17_@langchain+core@1.2.16": {
       "integrity": "sha512-84Z2tBr56j+0WT9lMAKDHrfSRiKABvbJhROIzzXzWrQTftZDiQcrASYVC8r1MARwTCPlDhP/jXj13EJSqCp8VQ==",
       "dependencies": [
         "@langchain/core",
@@ -790,7 +798,7 @@
       "integrity": "sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==",
       "bin": true
     },
-    "langchain@1.5.15_@langchain+core@1.2.14": {
+    "langchain@1.5.15_@langchain+core@1.2.16": {
       "integrity": "sha512-AlXdwsNf9e3e9QbGkW+qgII3QNdr/tntQPijobQAt5rNG/4O6ggOpVkH79+CegFDPFpR0/8LYAJbP54jCHaqmA==",
       "dependencies": [
         "@langchain/core",
@@ -1205,6 +1213,7 @@
     "packageJson": {
       "dependencies": [
         "npm:@langchain/anthropic@^1.5.12",
+        "npm:@langchain/fireworks@~0.2.17",
         "npm:@langchain/langgraph-checkpoint@^1.1.5",
         "npm:@langchain/openai@^1.6.2",
         "npm:@langchain/together-ai@~0.2.17",

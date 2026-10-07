@@ -8,7 +8,8 @@ const template = `<div class="settings-intro">
 </div>
 <provider-settings provider="together-ai"></provider-settings>
 <provider-settings provider="anthropic"></provider-settings>
-<provider-settings provider="openai"></provider-settings>`
+<provider-settings provider="openai"></provider-settings>
+<provider-settings provider="fireworks-ai"></provider-settings>`
 
 class ProvidersSettings extends HTMLElement {
   private initialized = false

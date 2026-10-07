@@ -17,6 +17,7 @@ Self-hosting still requires the provider to allow requests from your installatio
 | OpenAI | AI models |
 | Anthropic | AI models |
 | Together AI | AI models |
+| Fireworks | AI models |
 | Tavily | Web search and page reading |
 
 Add your API keys in **Settings → Providers**. Choose an AI model from the model picker.

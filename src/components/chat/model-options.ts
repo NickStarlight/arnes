@@ -35,6 +35,9 @@ const thinkingMachines: ModelBrand = {
 const minimax: ModelBrand = { label: 'MiniMax', logo: 'minimax', width: 40, height: 40 }
 const qwen: ModelBrand = { label: 'Qwen', logo: 'qwen', width: 40, height: 40 }
 const prismMl: ModelBrand = { label: 'Prism ML', logo: 'prism-ml', width: 40, height: 40 }
+const fireworks: ModelBrand = { label: 'Fireworks AI', logo: 'fireworks', width: 40, height: 20 }
+const nvidia: ModelBrand = { label: 'NVIDIA', logo: 'nvidia', width: 40, height: 40 }
+const moonshot: ModelBrand = { label: 'Moonshot AI', logo: 'moonshot', width: 40, height: 40 }
 
 export const modelProviders: ModelProvider[] = [
   {
@@ -157,6 +160,72 @@ export const modelProviders: ModelProvider[] = [
         id: 'prism-ml/Ternary-Bonsai-27B', label: 'Ternary Bonsai 27B', brand: prismMl,
         description: i18n._('A free ternary-quantized 27-billion-parameter model from Prism ML.'),
         website: 'https://huggingface.co/prism-ml/Ternary-Bonsai-27B',
+      },
+    ],
+  },
+  {
+    id: 'fireworks-ai',
+    label: 'Fireworks AI',
+    models: [
+      {
+        id: 'accounts/fireworks/models/ember-1', label: 'Ember-1', brand: fireworks,
+        description: i18n._('A Fireworks model built on Kimi K3 that produces shorter reasoning traces.'),
+        website: 'https://fireworks.ai/models/fireworks/ember-1',
+      },
+      {
+        id: 'accounts/fireworks/models/deepseek-v4p1-flash', label: 'DeepSeek V4.1 Flash', brand: deepseek,
+        description: i18n._('A compact DeepSeek model focused on speed and efficiency.'),
+        website: 'https://fireworks.ai/models/deepseek-ai/deepseek-v4p1-flash',
+      },
+      {
+        id: 'accounts/fireworks/models/glm-5p3', label: 'GLM 5.3', brand: zai,
+        description: i18n._('Z.ai’s flagship open GLM model for reasoning, coding, and agent workflows.'),
+        website: 'https://fireworks.ai/models/fireworks/glm-5p3',
+      },
+      {
+        id: 'accounts/fireworks/models/glm-5p3-flash', label: 'GLM 5.3 Flash', brand: zai,
+        description: i18n._('An open GLM model from Z.ai for reasoning and coding.'),
+        website: 'https://fireworks.ai/models/fireworks/glm-5p3-flash',
+      },
+      {
+        id: 'accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b', label: 'Nemotron Lightning 3.5 30B A3B', brand: nvidia,
+        description: i18n._('A compact NVIDIA hybrid Mamba-Transformer model for low-latency reasoning.'),
+        website: 'https://fireworks.ai/models/fireworks/nemotron-lightning-3p5-30b-a3b',
+      },
+      {
+        id: 'accounts/fireworks/models/qwen3p8-max', label: 'Qwen 3.8 Max', brand: qwen,
+        description: i18n._('A flagship Qwen model for demanding reasoning and coding work.'),
+        website: 'https://fireworks.ai/models/fireworks/qwen3p8-max',
+      },
+      {
+        id: 'accounts/fireworks/models/kimi-k3', label: 'Kimi K3', brand: moonshot,
+        description: i18n._('Moonshot AI’s flagship model for long-horizon coding, knowledge work, and reasoning.'),
+        website: 'https://fireworks.ai/models/fireworks/kimi-k3',
+      },
+      {
+        id: 'accounts/fireworks/models/glm-5p2', label: 'GLM 5.2', brand: zai,
+        description: i18n._('A previous-generation open GLM model from Z.ai for reasoning and coding.'),
+        website: 'https://fireworks.ai/models/fireworks/glm-5p2',
+      },
+      {
+        id: 'accounts/fireworks/models/minimax-m3', label: 'MiniMax M3', brand: minimax,
+        description: i18n._('A MiniMax model built for coding, long-context tasks, and agent workflows.'),
+        website: 'https://fireworks.ai/models/fireworks/minimax-m3',
+      },
+      {
+        id: 'accounts/fireworks/models/gpt-oss-120b', label: 'GPT-OSS 120B', brand: openai,
+        description: i18n._('OpenAI’s open-weight 120-billion-parameter model for reasoning and tool use.'),
+        website: 'https://fireworks.ai/models/fireworks/gpt-oss-120b',
+      },
+      {
+        id: 'accounts/fireworks/models/nemotron-3-ultra-nvfp4', label: 'Nemotron 3 Ultra NVFP4', brand: nvidia,
+        description: i18n._('NVIDIA’s frontier-scale hybrid model for complex agents and high-accuracy reasoning.'),
+        website: 'https://fireworks.ai/models/fireworks/nemotron-3-ultra-nvfp4',
+      },
+      {
+        id: 'accounts/fireworks/models/inkling', label: 'Inkling', brand: thinkingMachines,
+        description: i18n._('An open model from Thinking Machines Lab for reasoning, coding, and tool use.'),
+        website: 'https://fireworks.ai/models/fireworks/inkling',
       },
     ],
   },

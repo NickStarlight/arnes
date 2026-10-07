@@ -13,10 +13,13 @@ export type ModelSpecifications = {
 const openaiPricing = 'https://developers.openai.com/api/docs/pricing'
 const anthropicPricing = 'https://platform.claude.com/docs/en/about-claude/pricing'
 const togetherPricing = 'https://docs.together.ai/docs/serverless/models'
+const fireworksPricing = 'https://docs.fireworks.ai/serverless/pricing'
 const reasoningVision: readonly ModelCapability[] = ['text', 'vision', 'tools', 'reasoning']
+const reasoningTools: readonly ModelCapability[] = ['text', 'tools', 'reasoning']
 
 // Standard API rates in USD per million text tokens, checked 2026-10-06.
 // OpenAI entries use short-context rates. Together entries use Together's hosted rates.
+// Fireworks entries use Standard serverless rates.
 const specifications: Record<string, ModelSpecifications> = {
   'gpt-6-astra': {
     capabilities: reasoningVision,
@@ -122,6 +125,66 @@ const specifications: Record<string, ModelSpecifications> = {
     capabilities: ['text'],
     input: 0, output: 0,
     pricingSource: togetherPricing,
+  },
+  'accounts/fireworks/models/ember-1': {
+    capabilities: reasoningVision,
+    input: 3, output: 15, cachedInput: 0.3,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/deepseek-v4p1-flash': {
+    capabilities: reasoningVision,
+    input: 0.3, output: 1.2, cachedInput: 0.006,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/glm-5p3': {
+    capabilities: reasoningTools,
+    input: 1.4, output: 4.4, cachedInput: 0.26,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/glm-5p3-flash': {
+    capabilities: reasoningVision,
+    input: 0.15, output: 0.5, cachedInput: 0.03,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b': {
+    capabilities: reasoningTools,
+    input: 0.05, output: 0.2, cachedInput: 0.01,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/qwen3p8-max': {
+    capabilities: reasoningVision,
+    input: 2, output: 6, cachedInput: 0.25,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/kimi-k3': {
+    capabilities: reasoningVision,
+    input: 3, output: 15, cachedInput: 0.3,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/glm-5p2': {
+    capabilities: reasoningTools,
+    input: 1.4, output: 4.4, cachedInput: 0.14,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/minimax-m3': {
+    capabilities: reasoningTools,
+    input: 0.3, output: 1.2, cachedInput: 0.06,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/gpt-oss-120b': {
+    capabilities: reasoningTools,
+    input: 0.15, output: 0.6, cachedInput: 0.015,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/nemotron-3-ultra-nvfp4': {
+    capabilities: reasoningTools,
+    input: 0.6, output: 2.4, cachedInput: 0.12,
+    pricingSource: fireworksPricing,
+  },
+  'accounts/fireworks/models/inkling': {
+    capabilities: ['text', 'vision', 'audio', 'tools', 'reasoning'],
+    input: 1, output: 4.05, cachedInput: 0.17,
+    pricingSource: fireworksPricing,
   },
 }
 
