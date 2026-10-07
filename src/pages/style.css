@@ -273,6 +273,12 @@ arnes-shell .composer-panel:popover-open {
   display: grid;
 }
 
+/* Blurs the page beneath an open panel while the top-layer popover stays sharp. */
+arnes-shell .composer-panel::backdrop {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
 arnes-shell .composer-settings {
   grid-template-columns: minmax(0, calc(20rem + var(--space-4) + 1px)) minmax(0, 1fr);
 }
@@ -291,6 +297,31 @@ arnes-shell .composer-settings {
   arnes-shell .composer-panel:popover-open {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* The close-easing mechanism needs overlay, which Firefox lacks; there the blur stays instant. */
+  @supports (overlay: auto) {
+    arnes-shell .composer-panel::backdrop {
+      -webkit-backdrop-filter: blur(0);
+      backdrop-filter: blur(0);
+      transition:
+        -webkit-backdrop-filter var(--motion-duration-expand) var(--motion-easing),
+        backdrop-filter var(--motion-duration-expand) var(--motion-easing),
+        display var(--motion-duration-expand) allow-discrete,
+        overlay var(--motion-duration-expand) allow-discrete;
+    }
+
+    arnes-shell .composer-panel:popover-open::backdrop {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+
+    @starting-style {
+      arnes-shell .composer-panel:popover-open::backdrop {
+        -webkit-backdrop-filter: blur(0);
+        backdrop-filter: blur(0);
+      }
+    }
   }
 
   @starting-style {
