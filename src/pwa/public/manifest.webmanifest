@@ -9,10 +9,32 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "app-icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "arnes home"
+    },
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "480x800",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "arnes home"
     }
   ]
 }
