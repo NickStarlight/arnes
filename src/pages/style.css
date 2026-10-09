@@ -74,6 +74,9 @@
   --control-height-compact: 2rem;
   --icon-size: 1.25rem;
   --chevron-size: 1rem;
+  --select-arrow-inset: var(--space-3);
+  --select-padding-inline-end: calc(var(--select-arrow-inset) + var(--chevron-size) + var(--space-2));
+  --select-arrow-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23525252' d='M16 22L6 12l1.4-1.4l8.6 8.6l8.6-8.6L26 12z'/%3E%3C/svg%3E");
   --radius-control: 0.25rem;
   --border: 1px solid var(--color-border);
   --focus-ring: 2px solid var(--color-accent);
@@ -116,6 +119,17 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+/* Replaces the native select arrow, which browsers draw hugging the inline-end edge,
+   with the Carbon chevron inset from the edge exactly like the selected text. */
+select {
+  appearance: none;
+  padding-inline-end: var(--select-padding-inline-end);
+  background-image: var(--select-arrow-icon);
+  background-position: right var(--select-arrow-inset) center;
+  background-repeat: no-repeat;
+  background-size: var(--chevron-size);
 }
 
 .inline-loading {
@@ -231,9 +245,10 @@ arnes-shell .composer select {
   height: var(--control-height);
   max-width: 100%;
   padding: var(--space-3);
+  padding-inline-end: var(--select-padding-inline-end);
   border: var(--border);
   border-radius: var(--radius-control);
-  background: var(--color-surface);
+  background-color: var(--color-surface);
   font-size: var(--font-size-body);
 }
 
@@ -1038,7 +1053,7 @@ arnes-shell .composer-bar:has(textarea:focus-visible) {
 .app-page :is(button, input, select, textarea):disabled,
 .app-page .conversation-actions button:disabled,
 arnes-shell .composer :is(select, button):disabled {
-  background: var(--color-surface-subtle);
+  background-color: var(--color-surface-subtle);
   color: var(--color-disabled);
   cursor: not-allowed;
 }
@@ -1172,9 +1187,13 @@ arnes-shell .composer .context-compact:hover:not(:disabled),
   padding: var(--space-3);
   border: var(--border);
   border-radius: var(--radius-control);
-  background: var(--color-surface);
+  background-color: var(--color-surface);
   color: var(--color-text);
   font-size: var(--font-size-body);
+}
+
+.settings-page select {
+  padding-inline-end: var(--select-padding-inline-end);
 }
 
 .settings-page fieldset > div {
